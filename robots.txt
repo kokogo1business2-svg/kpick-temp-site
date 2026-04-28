@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://your-github-username.github.io/kpick-temp-site/sitemap.xml
+Sitemap: https://kokogo1business2-svg.github.io/kpick-temp-site/sitemap.xml
