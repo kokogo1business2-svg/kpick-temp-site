@@ -1,4 +1,5 @@
 *   {
+  box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
 html{
@@ -7,6 +8,7 @@ html{
 body{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .body{
@@ -235,7 +237,7 @@ body{
     gap: 36px;
 }
 .brand-card{
-    min-width: max-content;
+    min-width: 0;
     min-height: 550px;
     padding: 0;
     background-color: #ffffff;
@@ -1260,6 +1262,29 @@ body{
     text-decoration: none;
 }
 @media (max-width: 960px){
+    .body{
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+    .header-container{
+        width: 88%;
+    }
+    .dashboardsection{
+        min-height: 620px;
+        height: auto;
+        background-position: 58% center;
+    }
+    .dashboardarea{
+        margin-left: 8%;
+        margin-right: 8%;
+        padding-top: 130px;
+    }
+    .dashboardarea h1{
+        font-size: 42px;
+    }
+    .dashboardarea h2{
+        font-size: 22px;
+    }
     .brandContainer{
         grid-template-columns: 1fr;
     }
@@ -1294,6 +1319,7 @@ body{
         width: calc(100% - 40px);
         min-height: 74px;
         padding: 0 18px;
+        top: calc(var(--header-height, 72px) - 12px);
     }
     .navbar.navbar-scrolled{
         padding-left: 20px;
@@ -1301,6 +1327,7 @@ body{
     }
     .navigations{
         justify-content: center;
+        min-width: 0;
     }
     .navbar.navbar-scrolled .navigation{
         transform: translateX(0);
@@ -1408,9 +1435,99 @@ body{
     }
 }
 @media (max-width: 640px){
+    .body{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
     .body--brand{
-        margin-left: 8%;
-        margin-right: 8%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .header{
+        min-height: 58px;
+        padding: 10px 0;
+    }
+    .header-container{
+        width: 92%;
+        justify-content: center;
+    }
+    .header .logo img{
+        max-width: 142px;
+        height: auto;
+    }
+    .email{
+        display: none;
+    }
+    .dashboardsection{
+        min-height: 560px;
+        background-position: 62% center;
+    }
+    .dashboardarea{
+        margin-left: 6%;
+        margin-right: 6%;
+        padding-top: 124px;
+    }
+    .dashboardarea h1{
+        font-size: 34px;
+        line-height: 1.12;
+        margin-bottom: 14px;
+    }
+    .dashboardarea h2{
+        font-size: 18px;
+        line-height: 1.42;
+    }
+    .dashboardarea br{
+        display: none;
+    }
+    .TieUps{
+        padding: 56px 0;
+    }
+    .TieUps::before,
+    .TieUps::after{
+        width: 20px;
+    }
+    .tieupsTitle{
+        font-size: 28px;
+        line-height: 1.16;
+        margin-bottom: 28px;
+    }
+    .brand-card{
+        min-height: 420px;
+        border-radius: 18px;
+    }
+    .brand-card__hover-content{
+        padding: 24px 18px;
+    }
+    .brand-card__product-image{
+        max-width: 220px;
+        height: 240px;
+    }
+    .EropCard .brand-card__product-image,
+    .HansolCard .brand-card__product-image{
+        max-width: 260px;
+        height: 300px;
+    }
+    .brand-card__description{
+        font-size: 14px;
+    }
+    .about{
+        padding: 36px 0 56px;
+    }
+    .about-title h1{
+        font-size: 34px;
+        line-height: 1.1;
+    }
+    .about-paragraph{
+        font-size: 16px;
+    }
+    .partner-section{
+        padding: 72px 20px;
+    }
+    .partner-section__title{
+        font-size: 32px;
+    }
+    .partner-section__text{
+        font-size: 17px;
     }
     .product-categories__grid{
         grid-template-columns: 1fr;
@@ -1434,13 +1551,32 @@ body{
         width: calc(100% - 24px);
         border-radius: 28px;
         top: calc(var(--header-height, 72px) - 10px);
+        min-height: 62px;
+        padding: 8px 10px;
+    }
+    .navbar.navbar-scrolled{
+        top: 8px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .navigations{
+        justify-content: flex-start;
+        width: 100%;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+    .navigations::-webkit-scrollbar{
+        display: none;
     }
     .navigation{
+        flex-wrap: nowrap;
+        justify-content: flex-start;
         gap: 0;
     }
     .navigation li a{
         padding: 8px 10px;
         font-size: 14px;
+        white-space: nowrap;
     }
     .back-to-top{
         width: 46px;
@@ -1467,6 +1603,10 @@ body{
     .brand-local-nav{
         margin-top: -24px;
         border-radius: 22px;
+        padding: 14px;
+    }
+    .brand-local-nav__links{
+        gap: 8px;
     }
     .brand-local-nav__link{
         font-size: 13px;
@@ -1582,5 +1722,159 @@ body{
     }
     .simple-product-page__content{
         padding: 36px 24px;
+    }
+}
+@media (max-width: 520px){
+    .brand-hero{
+        min-height: 250px;
+    }
+    .brand-hero__content{
+        padding: 104px 18px 50px;
+    }
+    .brand-hero__logo{
+        width: min(270px, 74vw);
+    }
+    .brand-hero__logo--erop{
+        width: min(190px, 54vw);
+    }
+    .brand-intro{
+        font-size: 16px;
+        padding-bottom: 30px;
+    }
+    .product-categories__title,
+    .erop-categories__title{
+        font-size: 28px;
+        line-height: 1.15;
+        margin-bottom: 24px;
+    }
+    .product-card{
+        min-height: 340px;
+    }
+    .product-card__media{
+        height: 240px;
+    }
+    .product-card__image--tall{
+        height: 180px;
+    }
+    .product-card__image--bottle{
+        height: 88px;
+    }
+    .product-card__image--single{
+        height: 210px;
+    }
+    .product-card__image--pen{
+        height: 140px;
+    }
+    .product-card__label{
+        border-radius: 28px 28px 0 0;
+        padding: 16px 14px 14px;
+    }
+    .product-card__label h3{
+        font-size: 15px;
+    }
+    .product-card__label p{
+        font-size: 12px;
+    }
+    .erop-category-card{
+        min-height: 320px;
+    }
+    .erop-category-card__media{
+        min-height: 210px;
+        padding: 14px 14px 0;
+    }
+    .erop-category-card__image--eroptix,
+    .erop-category-card__image--trocar,
+    .erop-category-card__image--port{
+        max-height: 178px;
+    }
+    .erop-category-card__image--forcep{
+        max-height: 132px;
+    }
+    .erop-category-card__placeholder{
+        height: 160px;
+    }
+    .erop-category-card__footer{
+        min-height: 96px;
+        padding: 14px 16px;
+    }
+    .product-gallery{
+        gap: 18px;
+    }
+    .product-gallery__card{
+        min-height: 210px;
+        padding: 16px;
+    }
+    .product-gallery__card--single{
+        min-height: 220px;
+    }
+    .product-gallery__image--wide{
+        width: min(100%, 300px);
+    }
+    .product-gallery__image--tall{
+        max-height: 340px;
+    }
+    .product-gallery__image--lds,
+    .product-gallery__image--pen-dashboard{
+        min-height: 220px;
+    }
+    .single-use-carousel{
+        margin-top: 16px;
+    }
+    .single-use-carousel__viewport{
+        min-height: 280px;
+    }
+    .single-use-card{
+        width: min(100%, 240px);
+        padding: 14px;
+    }
+    .single-use-card__image{
+        max-width: 204px;
+    }
+    .product-table{
+        min-width: 560px;
+    }
+    .brand-product-nav{
+        gap: 10px;
+    }
+    .site-footer__top{
+        gap: 22px;
+        margin-bottom: 34px;
+    }
+    .site-footer__logo{
+        width: 210px;
+    }
+    .site-footer__contact{
+        font-size: 15px;
+        line-height: 1.55;
+    }
+    .site-footer__bottom{
+        font-size: 14px;
+    }
+}
+@media (max-width: 380px){
+    .navigation li a{
+        padding: 8px 9px;
+        font-size: 13px;
+    }
+    .dashboardarea h1{
+        font-size: 30px;
+    }
+    .dashboardarea h2{
+        font-size: 16px;
+    }
+    .brand-card{
+        min-height: 380px;
+    }
+    .contact-card{
+        padding: 18px 14px;
+    }
+    .single-use-carousel__viewport{
+        min-height: 250px;
+    }
+    .single-use-card{
+        width: min(100%, 214px);
+    }
+    .single-use-card__image{
+        max-width: 184px;
     }
 }
