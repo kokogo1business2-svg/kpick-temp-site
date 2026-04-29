@@ -553,6 +553,7 @@ body{
 }
 .erop-category-card__media{
     position: relative;
+    flex: 1 1 auto;
     min-height: 258px;
     padding: 28px 28px 0;
     background: #eef4f2;
@@ -587,7 +588,17 @@ body{
     transition: transform 0.25s ease;
 }
 .erop-category-card:hover .erop-category-card__image{
-    transform: translateY(6px) scale(1.04);
+    transform: translateY(0) scale(1.28);
+}
+.erop-category-card:hover .erop-category-card__image--eroptix,
+.erop-category-card:hover .erop-category-card__image--chito-block{
+    transform: translateY(0) scale(1.16);
+}
+.erop-category-card:hover .erop-category-card__image--trocar,
+.erop-category-card:hover .erop-category-card__image--dual-guard,
+.erop-category-card:hover .erop-category-card__image--new-port-pack,
+.erop-category-card:hover .erop-category-card__image--s-sustener{
+    transform: translateY(0) scale(1.2);
 }
 .erop-category-card__image--eroptix{
     max-height: 258px;
@@ -640,6 +651,17 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.24s ease, transform 0.24s ease, min-height 0.24s ease, padding 0.24s ease;
+}
+.erop-category-card:hover .erop-category-card__footer{
+    min-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 0;
+    transform: translateY(100%);
+    pointer-events: none;
 }
 .erop-category-card__footer p{
     margin: 0;
