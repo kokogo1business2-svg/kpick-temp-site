@@ -1582,6 +1582,7 @@ body{
     .navbar{
         width: 60px;
         height: 60px;
+        max-height: 60px;
         justify-content: flex-start;
         align-items: flex-start;
         border-radius: 50%;
@@ -1591,7 +1592,7 @@ body{
         padding: 8px;
         transform: none;
         overflow: hidden;
-        transition: width 0.24s ease, border-radius 0.2s ease, top 0.25s ease, padding 0.24s ease, box-shadow 0.24s ease;
+        transition: width 0.24s ease, max-height 0.28s ease, border-radius 0.2s ease, top 0.25s ease, padding 0.24s ease, box-shadow 0.24s ease;
     }
     .navbar.navbar-scrolled{
         top: 8px;
@@ -1601,6 +1602,7 @@ body{
     .navbar.is-menu-open{
         width: calc(100% - 24px);
         height: 60px;
+        max-height: 60px;
         border-radius: 26px;
         padding: 8px;
     }
@@ -1634,6 +1636,7 @@ body{
     }
     .navbar.is-menu-expanded{
         height: auto;
+        max-height: 360px;
     }
     .navbar.is-menu-expanded .navigations{
         display: block;
