@@ -539,61 +539,85 @@ body{
 .erop-category-card{
     display: flex;
     flex-direction: column;
-    min-height: 388px;
-    background-color: #ffffff;
+    min-height: 380px;
+    background-color: #eef4f2;
     border: 1px solid rgba(15, 45, 107, 0.08);
     text-decoration: none;
-    box-shadow: 0 12px 28px rgba(15, 32, 73, 0.08);
+    box-shadow: 0 8px 16px rgba(15, 32, 73, 0.14);
     overflow: hidden;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .erop-category-card:hover{
-    transform: translateY(-8px);
-    box-shadow: 0 18px 34px rgba(15, 32, 73, 0.14);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 30px rgba(15, 32, 73, 0.18);
 }
 .erop-category-card__media{
-    min-height: 276px;
-    padding: 18px 18px 0;
-    background: linear-gradient(180deg, #fbfeff 0%, #f5fbff 100%);
+    position: relative;
+    min-height: 258px;
+    padding: 28px 28px 0;
+    background: #eef4f2;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.erop-category-card__media h3{
+    position: absolute;
+    top: 24px;
+    left: 28px;
+    z-index: 2;
+    margin: 0;
+    color: #102a67;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.erop-category-card:hover .erop-category-card__media h3{
+    opacity: 0;
+    transform: translateY(-8px);
+}
 .erop-category-card__image{
+    position: relative;
+    z-index: 1;
     display: block;
     max-width: 100%;
     height: auto;
     object-fit: contain;
+    transform: translateY(16px);
+    transition: transform 0.25s ease;
+}
+.erop-category-card:hover .erop-category-card__image{
+    transform: translateY(6px) scale(1.04);
 }
 .erop-category-card__image--eroptix{
-    max-height: 220px;
+    max-height: 258px;
 }
 .erop-category-card__image--trocar{
-    max-height: 236px;
+    max-height: 282px;
 }
 .erop-category-card__image--forcep{
-    max-height: 170px;
+    max-height: 214px;
 }
 .erop-category-card__image--port{
-    max-height: 224px;
+    max-height: 258px;
 }
 .erop-category-card__image--dual-guard{
-    max-height: 224px;
+    max-height: 258px;
 }
 .erop-category-card__image--chito-block{
     width: min(100%, 360px);
-    max-height: 230px;
+    max-height: 236px;
 }
 .erop-category-card__image--new-port-pack{
     width: min(100%, 330px);
-    max-height: 224px;
+    max-height: 258px;
 }
 .erop-category-card__image--t-closure{
     width: min(100%, 260px);
-    max-height: 184px;
+    max-height: 190px;
 }
 .erop-category-card__image--s-sustener{
-    max-height: 224px;
+    max-height: 250px;
 }
 .erop-category-card__placeholder{
     width: 100%;
@@ -609,25 +633,20 @@ body{
 }
 .erop-category-card__footer{
     margin-top: auto;
-    background: #0b7a42;
+    background: #06733a;
     color: #ffffff;
-    padding: 16px 18px 18px;
-    min-height: 112px;
-}
-.erop-category-card__footer h3{
-    margin: 0 0 10px;
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 0.03em;
+    padding: 28px 18px;
+    min-height: 104px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .erop-category-card__footer p{
     margin: 0;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.45;
+    text-align: center;
     color: rgba(255, 255, 255, 0.92);
-}
-.erop-category-card--pending .erop-category-card__footer{
-    background: #137a4d;
 }
 .product-categories{
     padding-bottom: 32px;
@@ -1772,10 +1791,15 @@ body{
         grid-template-columns: 1fr;
     }
     .erop-category-card{
-        min-height: 360px;
+        min-height: 344px;
     }
     .erop-category-card__media{
-        min-height: 248px;
+        min-height: 236px;
+    }
+    .erop-category-card__media h3{
+        top: 22px;
+        left: 22px;
+        font-size: 18px;
     }
     .erop-category-card__placeholder{
         height: 188px;
@@ -1993,6 +2017,11 @@ body{
     .erop-category-card__media{
         min-height: 210px;
         padding: 14px 14px 0;
+    }
+    .erop-category-card__media h3{
+        top: 18px;
+        left: 18px;
+        font-size: 17px;
     }
     .erop-category-card__image--eroptix,
     .erop-category-card__image--trocar,
