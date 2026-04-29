@@ -177,7 +177,8 @@ body{
     
 }
 .navbar.navbar-scrolled .navlogo{
-    transform: translate(0, -50%) scale(0.82);
+    width: 205px;
+    transform: translate(0, -50%) scale(1);
     opacity: 1;
     pointer-events: auto;
 }
@@ -185,6 +186,8 @@ body{
     display: block;
     width: 100%;
     height: auto;
+    border: 0;
+    outline: 0;
 }
 
 .home, .aboutus, .brands {
