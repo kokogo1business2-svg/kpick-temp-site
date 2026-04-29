@@ -151,7 +151,7 @@ body{
     transition: transform 0.55s cubic-bezier(0.2, 0.9, 0.2, 1);
 }
 .navbar.navbar-scrolled .navigation{
-    transform: translateX(0);
+    transform: translateX(170px);
 }
 .navigation li a{
     display: inline-block;
@@ -177,8 +177,9 @@ body{
     
 }
 .navbar.navbar-scrolled .navlogo{
-    opacity: 0;
-    pointer-events: none;
+    transform: translate(0, -50%) scale(0.82);
+    opacity: 1;
+    pointer-events: auto;
 }
 .nav-logo{
     display: block;
