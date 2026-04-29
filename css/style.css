@@ -596,9 +596,11 @@ body{
 }
 .erop-category-card:hover .erop-category-card__image--trocar,
 .erop-category-card:hover .erop-category-card__image--dual-guard,
-.erop-category-card:hover .erop-category-card__image--new-port-pack,
 .erop-category-card:hover .erop-category-card__image--s-sustener{
     transform: translateY(0) scale(1.2);
+}
+.erop-category-card:hover .erop-category-card__image--new-port-pack{
+    transform: translateY(0) scale(1.32);
 }
 .erop-category-card__image--eroptix{
     max-height: 258px;
@@ -620,8 +622,8 @@ body{
     max-height: 236px;
 }
 .erop-category-card__image--new-port-pack{
-    width: min(100%, 330px);
-    max-height: 258px;
+    width: min(112%, 380px);
+    max-height: 286px;
 }
 .erop-category-card__image--t-closure{
     width: min(100%, 260px);
