@@ -156,6 +156,31 @@ function renderSpecRows(product) {
 
 if (root) {
     root.innerHTML = `
+        <section class="heading">
+            <div class="header">
+                <div class="header-container">
+                    <div class="logo"><img src="img/KpickLogo.png" alt="K-Pick Trading Corp logo"></div>
+                    <div class="email"><p class="mail">E-MAIL: kpickmedicalmarketing@gmail.com</p></div>
+                </div>
+            </div>
+
+            <div class="navbar">
+                <a class="navlogo" href="index.html" aria-label="K-Pick Trading Corp home">
+                    <img src="img/KpickLogoDark.png" alt="K-Pick Trading Corp" class="nav-logo">
+                </a>
+                <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-controls="primary-navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+                <div class="navigations">
+                    <ul class="navigation" id="primary-navigation">
+                        <li class="nav home"><a href="index.html">Home</a></li>
+                        <li class="nav aboutus"><a href="index.html#about">About Us</a></li>
+                        <li class="nav brands"><a href="index.html#TieUps">Brands</a></li>
+                        <li class="nav generatePO"><a href="request.htm">Generate Quote / PO</a></li>
+                        <li class="nav contactus"><a href="contact.htm">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
         <section class="erop-product-hero">
             <div class="erop-product-hero__overlay"></div>
             <img src="img/eroplogo.png" alt="EROP" class="erop-product-hero__logo">
