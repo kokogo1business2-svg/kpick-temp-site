@@ -1372,6 +1372,20 @@ body{
         opacity: 0;
         pointer-events: none;
     }
+    .navbar.navbar-scrolled .navigations{
+        justify-content: center;
+    }
+    .navigation{
+        width: 100%;
+    }
+    .navigation li{
+        min-width: 0;
+    }
+    .navigation li a{
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 14px;
+    }
     .brand-intro{
         font-size: 18px;
     }
