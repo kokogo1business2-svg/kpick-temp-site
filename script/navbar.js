@@ -4,12 +4,15 @@ const headerLogo = document.querySelector(".header .logo img");
 const navbarLogo = document.querySelector(".navbar .navlogo");
 const navToggle = document.querySelector(".nav-toggle");
 const navigationPanel = document.querySelector(".navigations");
+let mobileMenuTimer;
 
 function closeMobileMenu() {
     if (!navbar || !navToggle) {
         return;
     }
 
+    window.clearTimeout(mobileMenuTimer);
+    navbar.classList.remove("is-menu-expanded");
     navbar.classList.remove("is-menu-open");
     navToggle.setAttribute("aria-expanded", "false");
     navToggle.setAttribute("aria-label", "Open navigation menu");
@@ -20,7 +23,19 @@ function toggleMobileMenu() {
         return;
     }
 
-    const isOpen = navbar.classList.toggle("is-menu-open");
+    const isOpen = !navbar.classList.contains("is-menu-open");
+
+    window.clearTimeout(mobileMenuTimer);
+
+    if (isOpen) {
+        navbar.classList.add("is-menu-open");
+        mobileMenuTimer = window.setTimeout(() => {
+            navbar.classList.add("is-menu-expanded");
+        }, 230);
+    } else {
+        closeMobileMenu();
+    }
+
     navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
     navToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
 }

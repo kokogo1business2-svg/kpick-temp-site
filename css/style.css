@@ -1591,7 +1591,7 @@ body{
         padding: 8px;
         transform: none;
         overflow: hidden;
-        transition: width 0.24s ease, height 0.24s ease, border-radius 0.24s ease, top 0.25s ease, padding 0.24s ease, box-shadow 0.24s ease;
+        transition: width 0.24s ease, border-radius 0.2s ease, top 0.25s ease, padding 0.24s ease, box-shadow 0.24s ease;
     }
     .navbar.navbar-scrolled{
         top: 8px;
@@ -1600,7 +1600,7 @@ body{
     }
     .navbar.is-menu-open{
         width: calc(100% - 24px);
-        height: auto;
+        height: 60px;
         border-radius: 26px;
         padding: 8px;
     }
@@ -1608,9 +1608,8 @@ body{
         display: inline-flex;
         flex: 0 0 auto;
         margin: 0;
-        border: 3px solid #ffffff;
-        outline: 1px solid rgba(16, 42, 103, 0.18);
-        outline-offset: 0;
+        border: 0;
+        outline: 0;
         position: relative;
         z-index: 2;
         transition: border-color 0.2s ease, background-color 0.2s ease;
@@ -1633,7 +1632,10 @@ body{
         transform: translateX(-8px);
         transition: opacity 0.18s ease, visibility 0.18s ease, transform 0.18s ease;
     }
-    .navbar.is-menu-open .navigations{
+    .navbar.is-menu-expanded{
+        height: auto;
+    }
+    .navbar.is-menu-expanded .navigations{
         display: block;
         opacity: 1;
         visibility: visible;
