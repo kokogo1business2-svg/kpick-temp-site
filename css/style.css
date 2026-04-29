@@ -1480,6 +1480,100 @@ body{
         bottom: 18px;
     }
 }
+@media (max-width: 760px){
+    .navbar{
+        width: 60px;
+        height: 60px;
+        max-height: 60px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-radius: 50%;
+        left: 12px;
+        min-height: 0;
+        padding: 8px;
+        transform: none;
+        overflow: hidden;
+        transition: width 0.24s ease, max-height 0.28s ease, border-radius 0.2s ease, top 0.25s ease, padding 0.24s ease, box-shadow 0.24s ease;
+    }
+    .navbar.navbar-scrolled{
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .navbar.is-menu-open{
+        width: calc(100% - 24px);
+        height: 60px;
+        max-height: 60px;
+        border-radius: 26px;
+        padding: 8px;
+    }
+    .navbar.is-menu-expanded{
+        height: auto;
+        max-height: 360px;
+    }
+    .nav-toggle{
+        display: inline-flex;
+        flex: 0 0 auto;
+        margin: 0;
+        border: 0;
+        outline: 0;
+        position: relative;
+        z-index: 2;
+    }
+    .navigations{
+        position: static;
+        display: none;
+        flex: 1 1 auto;
+        width: auto;
+        min-width: 0;
+        margin-left: 8px;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateX(-8px);
+        transition: opacity 0.18s ease, visibility 0.18s ease, transform 0.18s ease;
+    }
+    .navbar.is-menu-expanded .navigations{
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateX(0);
+    }
+    .navigation{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        width: 100%;
+        padding: 0;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+        transform: none;
+    }
+    .navigation li{
+        margin: 0;
+        padding: 0;
+    }
+    .navigation li a{
+        display: block;
+        width: 100%;
+        padding: 11px 14px;
+        font-size: 15px;
+        text-align: left;
+        white-space: nowrap;
+        border-radius: 16px;
+    }
+    .dashboardsection{
+        width: 100%;
+        max-width: 100%;
+    }
+    .brand-card{
+        width: 100%;
+        max-width: 100%;
+    }
+}
 @media (max-width: 640px){
     .body{
         margin-left: 5%;
@@ -1593,97 +1687,8 @@ body{
     .product-card{
         min-height: 380px;
     }
-    .navbar{
-        width: 60px;
-        height: 60px;
-        max-height: 60px;
-        justify-content: flex-start;
-        align-items: flex-start;
-        border-radius: 50%;
-        top: calc(var(--header-height, 72px) - 10px);
-        left: 12px;
-        min-height: 0;
-        padding: 8px;
-        transform: none;
-        overflow: hidden;
-        transition: width 0.24s ease, max-height 0.28s ease, border-radius 0.2s ease, top 0.25s ease, padding 0.24s ease, box-shadow 0.24s ease;
-    }
-    .navbar.navbar-scrolled{
-        top: 8px;
-        padding-left: 8px;
-        padding-right: 8px;
-    }
-    .navbar.is-menu-open{
-        width: calc(100% - 24px);
-        height: 60px;
-        max-height: 60px;
-        border-radius: 26px;
-        padding: 8px;
-    }
     .nav-toggle{
-        display: inline-flex;
-        flex: 0 0 auto;
-        margin: 0;
-        border: 0;
-        outline: 0;
-        position: relative;
-        z-index: 2;
         transition: border-color 0.2s ease, background-color 0.2s ease;
-    }
-    .navbar.is-menu-open .nav-toggle{
-        border-color: transparent;
-        outline-color: transparent;
-    }
-    .navigations{
-        position: static;
-        display: none;
-        flex: 1 1 auto;
-        width: auto;
-        min-width: 0;
-        margin-left: 8px;
-        overflow: hidden;
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-        transform: translateX(-8px);
-        transition: opacity 0.18s ease, visibility 0.18s ease, transform 0.18s ease;
-    }
-    .navbar.is-menu-expanded{
-        height: auto;
-        max-height: 360px;
-    }
-    .navbar.is-menu-expanded .navigations{
-        display: block;
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-        transform: translateX(0);
-    }
-    .navigation{
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 4px;
-        width: 100%;
-        padding: 0;
-        border-radius: 0;
-        background: transparent;
-        box-shadow: none;
-        border: 0;
-        transform: none;
-    }
-    .navigation li{
-        margin: 0;
-        padding: 0;
-    }
-    .navigation li a{
-        display: block;
-        width: 100%;
-        padding: 11px 14px;
-        font-size: 15px;
-        white-space: nowrap;
-        border-radius: 16px;
-        text-align: left;
     }
     .navigation li a:hover{
         background: rgba(15, 45, 107, 0.08);
