@@ -1480,7 +1480,7 @@ body{
         bottom: 18px;
     }
 }
-@media (max-width: 760px){
+@media (max-width: 840px){
     .heading,
     .header,
     .dashboardsection,

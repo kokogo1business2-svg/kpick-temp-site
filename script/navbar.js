@@ -77,7 +77,7 @@ window.addEventListener("scroll", updateNavbarState);
 window.addEventListener("resize", () => {
     updateNavbarState();
 
-    if (window.innerWidth > 640) {
+    if (window.innerWidth > 840) {
         closeMobileMenu();
     }
 });
