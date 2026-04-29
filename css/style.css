@@ -104,8 +104,7 @@ body{
 .navigations{
     flex: 1 1 auto;
     display: flex;
-    justify-content: flex-end;
-    padding-left: 150px;
+    justify-content: center;
 }
 .nav-toggle{
     display: none;
@@ -152,7 +151,7 @@ body{
     transition: transform 0.55s cubic-bezier(0.2, 0.9, 0.2, 1);
 }
 .navbar.navbar-scrolled .navigation{
-    transform: translateX(170px);
+    transform: translateX(105px);
 }
 .navigation li a{
     display: inline-block;
@@ -1704,7 +1703,6 @@ body{
     .navigations{
         justify-content: center;
         min-width: 0;
-        padding-left: 0;
     }
     .navbar.navbar-scrolled .navigation{
         transform: translateX(0);
