@@ -622,8 +622,8 @@ body{
     max-height: 236px;
 }
 .erop-category-card__image--new-port-pack{
-    width: min(132%, 450px);
-    max-height: 330px;
+    width: min(150%, 560px);
+    max-height: 430px;
 }
 .erop-category-card__image--t-closure{
     width: min(100%, 260px);
