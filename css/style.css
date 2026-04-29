@@ -105,6 +105,38 @@ body{
     display: flex;
     justify-content: center;
 }
+.nav-toggle{
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    background: #102a67;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 10px 22px rgba(16, 42, 103, 0.18);
+}
+.nav-toggle span{
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 999px;
+    background: currentColor;
+    transition: transform 0.22s ease, opacity 0.22s ease;
+}
+.navbar.is-menu-open .nav-toggle span:nth-child(1){
+    transform: translateY(7px) rotate(45deg);
+}
+.navbar.is-menu-open .nav-toggle span:nth-child(2){
+    opacity: 0;
+}
+.navbar.is-menu-open .nav-toggle span:nth-child(3){
+    transform: translateY(-7px) rotate(-45deg);
+}
 .navigation{
     list-style-type: none;
     display: flex;
@@ -1549,34 +1581,64 @@ body{
     }
     .navbar{
         width: calc(100% - 24px);
+        justify-content: space-between;
         border-radius: 28px;
         top: calc(var(--header-height, 72px) - 10px);
         min-height: 62px;
-        padding: 8px 10px;
+        padding: 8px 14px;
     }
     .navbar.navbar-scrolled{
         top: 8px;
         padding-left: 10px;
         padding-right: 10px;
     }
-    .navigations{
-        justify-content: flex-start;
-        width: 100%;
-        overflow-x: auto;
-        scrollbar-width: none;
+    .nav-toggle{
+        display: inline-flex;
+        flex: 0 0 auto;
+        margin-left: auto;
     }
-    .navigations::-webkit-scrollbar{
-        display: none;
+    .navigations{
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        right: 0;
+        display: block;
+        width: 100%;
+        overflow: visible;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-8px);
+        transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+    }
+    .navbar.is-menu-open .navigations{
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
     }
     .navigation{
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        gap: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+        padding: 10px;
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 18px 40px rgba(8, 25, 67, 0.18);
+        border: 1px solid rgba(15, 45, 107, 0.08);
+        transform: none;
     }
     .navigation li a{
-        padding: 8px 10px;
-        font-size: 14px;
+        display: block;
+        padding: 12px 14px;
+        font-size: 15px;
         white-space: nowrap;
+        border-radius: 16px;
+    }
+    .navigation li a:hover{
+        background: rgba(15, 45, 107, 0.08);
+        transform: none;
     }
     .back-to-top{
         width: 46px;
@@ -1853,7 +1915,7 @@ body{
 }
 @media (max-width: 380px){
     .navigation li a{
-        padding: 8px 9px;
+        padding: 11px 12px;
         font-size: 13px;
     }
     .dashboardarea h1{
