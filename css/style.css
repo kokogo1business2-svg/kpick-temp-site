@@ -1480,6 +1480,11 @@ body{
     max-width: min(440px, 40vw);
     margin-left: 42px;
 }
+.erop-showcase--variations .erop-showcase__image--forcep{
+    max-width: min(620px, 58vw);
+    max-height: 360px;
+    margin-left: 18px;
+}
 .erop-showcase--variations .erop-showcase__caption{
     right: 8%;
     bottom: 28px;
@@ -1663,6 +1668,9 @@ body{
     padding: 34px 20px 72px;
     background: #f4f4f4;
 }
+body[data-erop-product="forcep"] .erop-spec{
+    padding-bottom: 0;
+}
 .erop-spec__group{
     margin: 0 auto 72px;
 }
@@ -1710,6 +1718,81 @@ body{
     object-fit: contain;
     display: block;
     margin: 0 auto;
+}
+.forcep-spec{
+    width: min(1120px, 100%);
+}
+.forcep-spec__table-wrap{
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+.forcep-spec__table{
+    width: 100%;
+    min-width: 820px;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-top: 3px solid #07356f;
+    color: #151923;
+}
+.forcep-spec__table th,
+.forcep-spec__table td{
+    border: 1px solid #e5eaf1;
+    padding: 20px 24px;
+    vertical-align: top;
+    font-size: 21px;
+    line-height: 1.35;
+}
+.forcep-spec__table th{
+    width: 25%;
+    color: #151515;
+    font-weight: 800;
+    text-align: right;
+}
+.forcep-spec__table td{
+    width: 25%;
+    color: #626262;
+    font-weight: 500;
+}
+.forcep-spec__table td[colspan]{
+    text-align: left;
+}
+.forcep-spec__table ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.forcep-spec__table li{
+    margin: 0 0 10px;
+}
+.forcep-spec__table li::before{
+    content: "·";
+    margin-right: 4px;
+}
+.forcep-spec__competitiveness{
+    width: min(1060px, 100%);
+    margin: 72px auto 0;
+    padding: 58px 20px;
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 44px;
+    align-items: start;
+    background: #ffffff;
+    box-shadow: 0 0 0 100vmax #ffffff;
+    clip-path: inset(0 -100vmax);
+}
+.forcep-spec__competitiveness h3{
+    margin: 0;
+    color: #151515;
+    font-size: 20px;
+    line-height: 1.25;
+    font-weight: 800;
+}
+.forcep-spec__competitiveness p{
+    margin: 0;
+    color: #626262;
+    font-size: 14px;
+    line-height: 1.5;
 }
 .trocar-spec{
     width: min(1120px, 100%);
@@ -1785,63 +1868,81 @@ body{
 }
 .trocar-scroll-story{
     --trocar-rotate: 270deg;
-    --trocar-x: 23vw;
-    --trocar-y: 0px;
+    --trocar-left: 72%;
+    --trocar-top: 50%;
     --trocar-scale: 1;
-    --halo-x: 12vw;
-    --halo-y: -150px;
+    --halo-left: 47%;
+    --halo-top: 37%;
+    --halo-size: 250px;
+    --focus-x: 18%;
     position: relative;
-    min-height: 200vh;
+    min-height: 225vh;
     background: radial-gradient(circle at 50% 42%, rgba(20, 50, 104, 0.2) 0%, rgba(0, 25, 45, 0) 52%), #00192d;
     color: #ffffff;
 }
 .trocar-scroll-story.is-step-1{
-    --trocar-rotate: 405deg;
-    --trocar-x: 0vw;
-    --trocar-y: 0px;
-    --trocar-scale: 0.5;
-    --halo-x: -5vw;
-    --halo-y: 60px;
+    --trocar-rotate: 315deg;
+    --trocar-left: 50%;
+    --trocar-top: 50%;
+    --trocar-scale: 0.56;
+    --halo-left: 42%;
+    --halo-top: 55%;
+    --halo-size: 230px;
+    --focus-x: 0%;
 }
 .trocar-scroll-story.is-step-2{
     --trocar-rotate: 180deg;
-    --trocar-x: 0vw;
-    --trocar-y: 105px;
-    --trocar-scale: 0.68;
-    --halo-x: 0vw;
-    --halo-y: -28px;
+    --trocar-left: 45%;
+    --trocar-top: 100%;
+    --trocar-scale: 0.72;
+    --halo-left: 50%;
+    --halo-top: 43%;
+    --halo-size: 230px;
+    --focus-x: 0%;
 }
 .trocar-scroll-story__stage{
     position: sticky;
     top: 0;
-    min-height: 100vh;
+    min-height: 82vh;
     display: grid;
     place-items: center;
     overflow: hidden;
     pointer-events: none;
 }
-.trocar-scroll-story__image{
+.trocar-scroll-story__focus{
     position: relative;
+    width: min(860px, 86vw);
+    height: min(560px, 70vh);
+    overflow: hidden;
+    transform: translateX(var(--focus-x));
+    transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.trocar-scroll-story__image{
+    position: absolute;
+    left: var(--trocar-left);
+    top: var(--trocar-top);
     z-index: 2;
-    width: min(430px, 34vw);
+    width: min(430px, 60%);
     height: auto;
-    transform: translate(var(--trocar-x), var(--trocar-y)) rotate(var(--trocar-rotate)) scale(var(--trocar-scale));
+    transform: translate(-50%, -50%) rotate(var(--trocar-rotate)) scale(var(--trocar-scale));
     transform-origin: center;
-    transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.55s ease;
+    transition: left 0.9s cubic-bezier(0.16, 1, 0.3, 1), top 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.55s ease;
     filter: drop-shadow(0 28px 36px rgba(0, 0, 0, 0.24));
 }
 .trocar-scroll-story__halo{
     position: absolute;
+    left: var(--halo-left);
+    top: var(--halo-top);
     z-index: 1;
-    width: 210px;
+    width: var(--halo-size);
     aspect-ratio: 1;
     border-radius: 50%;
     border: 3px solid rgba(71, 105, 233, 0.78);
     box-shadow:
         0 0 0 12px rgba(71, 105, 233, 0.15),
         0 0 0 34px rgba(71, 105, 233, 0.08);
-    transform: translate(var(--halo-x), var(--halo-y));
-    transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), width 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translate(-50%, -50%);
+    transition: left 0.9s cubic-bezier(0.16, 1, 0.3, 1), top 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), width 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .trocar-scroll-story__steps{
     position: absolute;
@@ -1850,7 +1951,7 @@ body{
     pointer-events: none;
 }
 .trocar-scroll-step{
-    min-height: 100vh;
+    min-height: 75vh;
     padding: 0 10%;
     display: grid;
     align-items: center;
@@ -1864,6 +1965,11 @@ body{
 }
 .trocar-scroll-step--valve{
     grid-template-columns: minmax(230px, 320px) 1fr;
+    align-content: center;
+    row-gap: 0;
+}
+.trocar-scroll-step--valve > *{
+    grid-column: 1;
 }
 .trocar-scroll-step--fixation,
 .trocar-scroll-step--tip{
@@ -1882,14 +1988,14 @@ body{
 }
 .trocar-scroll-step h2{
     margin: 0 0 16px;
-    font-size: 24px;
+    font-size: 30px;
     line-height: 1.15;
     font-weight: 800;
 }
 .trocar-scroll-step p{
     margin: 0;
     color: rgba(255, 255, 255, 0.9);
-    font-size: 12px;
+    font-size: 15px;
     line-height: 1.55;
 }
 .trocar-scroll-step--fixation .trocar-feature__icon,
@@ -1902,117 +2008,156 @@ body{
     margin-right: auto;
 }
 .trocar-feature__icon{
-    width: 54px;
-    height: 54px;
+    width: 108px;
+    height: 108px;
     display: block;
-    margin-bottom: 22px;
-    border: 2px solid rgba(255, 255, 255, 0.86);
-    border-radius: 50%;
+    margin-bottom: 30px;
+    object-fit: contain;
     position: relative;
 }
-.trocar-feature__icon::before,
-.trocar-feature__icon::after{
-    content: "";
+.forcep-scroll-story{
+    --forcep-rotate: 0deg;
+    --forcep-left: 5%;
+    --forcep-top: 50%;
+    --forcep-scale: 2;
+    --forcep-halo-left: 62%;
+    --forcep-halo-top: 48%;
+    --forcep-halo-size: 425px;
+    --forcep-focus-width: min(700px, 58vw);
+    --forcep-focus-x: 12%;
+    position: relative;
+    min-height: 150vh;
+    background: radial-gradient(circle at 54% 46%, rgba(20, 50, 104, 0.2) 0%, rgba(0, 25, 45, 0) 52%), #00192d;
+    color: #ffffff;
+}
+.forcep-scroll-story.is-step-1{
+    --forcep-rotate: -30deg;
+    --forcep-left: 53%;
+    --forcep-top: 50%;
+    --forcep-scale: 0.95;
+    --forcep-halo-left: 44%;
+    --forcep-halo-top: 51%;
+    --forcep-halo-size: 300px;
+    --forcep-focus-width: min(1040px, 88vw);
+    --forcep-focus-x: 0%;
+}
+.forcep-scroll-story__stage{
+    position: sticky;
+    top: 0;
+    min-height: 82vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    pointer-events: none;
+}
+.forcep-scroll-story__focus{
+    position: relative;
+    width: var(--forcep-focus-width);
+    height: min(520px, 68vh);
+    overflow: hidden;
+    transform: translateX(var(--forcep-focus-x));
+    transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.forcep-scroll-story__image{
     position: absolute;
-    background: rgba(255, 255, 255, 0.9);
+    left: var(--forcep-left);
+    top: var(--forcep-top);
+    z-index: 2;
+    width: min(900px, 96%);
+    height: auto;
+    transform: translate(-50%, -50%) rotate(var(--forcep-rotate)) scale(var(--forcep-scale));
+    transform-origin: center;
+    transition: left 0.9s cubic-bezier(0.16, 1, 0.3, 1), top 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    filter: drop-shadow(0 28px 36px rgba(0, 0, 0, 0.24));
 }
-.trocar-feature__icon--spark::before{
-    left: 13px;
-    top: 27px;
-    width: 30px;
-    height: 2px;
+.forcep-scroll-story__halo{
+    position: absolute;
+    left: var(--forcep-halo-left);
+    top: var(--forcep-halo-top);
+    z-index: 1;
+    width: var(--forcep-halo-size);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 3px solid rgba(71, 105, 233, 0.78);
     box-shadow:
-        6px -11px 0 -0.5px rgba(255, 255, 255, 0.9),
-        9px 11px 0 -0.5px rgba(255, 255, 255, 0.9);
-    transform: rotate(-36deg);
+        0 0 0 12px rgba(71, 105, 233, 0.15),
+        0 0 0 34px rgba(71, 105, 233, 0.08);
+    transform: translate(-50%, -50%);
+    transition: left 0.9s cubic-bezier(0.16, 1, 0.3, 1), top 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.trocar-feature__icon--spark::after{
-    left: 20px;
-    top: 18px;
-    width: 18px;
-    height: 18px;
-    border: 2px solid rgba(255, 255, 255, 0.9);
-    border-right-color: transparent;
-    border-radius: 50%;
-    background: transparent;
-    transform: rotate(14deg);
+.forcep-scroll-story__steps{
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
 }
-.trocar-feature__icon--slash::before,
-.trocar-feature__icon--v::before{
-    width: 2px;
-    height: 40px;
-    left: 25px;
-    top: 7px;
-    transform: rotate(42deg);
+.forcep-scroll-step{
+    min-height: 75vh;
+    padding: 0 7%;
+    display: grid;
+    align-content: center;
+    opacity: 0.35;
+    transform: translateY(34px);
+    transition: opacity 0.45s ease-out, transform 0.55s ease-out;
 }
-.trocar-feature__icon--slash::after{
-    width: 2px;
-    height: 40px;
-    left: 31px;
-    top: 7px;
-    transform: rotate(42deg);
+.forcep-scroll-step--unlock{
+    max-width: 620px;
 }
-.trocar-feature__icon--eye::before{
-    width: 30px;
-    height: 16px;
-    left: 9px;
-    top: 18px;
-    border: 2px solid rgba(255, 255, 255, 0.9);
-    border-radius: 50%;
-    background: transparent;
+.forcep-scroll-step--grip{
+    grid-template-columns: minmax(260px, 420px) 1fr minmax(300px, 460px);
+    gap: 48px;
 }
-.trocar-feature__icon--eye::after{
-    width: 8px;
-    height: 8px;
-    left: 20px;
-    top: 22px;
-    border-radius: 50%;
-    box-shadow:
-        13px -8px 0 -2px #00192d,
-        13px -8px 0 0 rgba(255, 255, 255, 0.9),
-        13px -8px 0 2px #00192d,
-        13px -8px 0 3px rgba(255, 255, 255, 0.9);
+.forcep-scroll-step--grip > div:first-child{
+    grid-column: 1;
+    align-self: start;
 }
-.trocar-feature__icon--size::before{
-    width: 24px;
-    height: 24px;
-    left: 10px;
-    top: 15px;
-    border: 2px solid rgba(255, 255, 255, 0.9);
-    border-radius: 50%;
-    background: transparent;
+.forcep-scroll-step--grip > div:last-child{
+    grid-column: 3;
+    align-self: end;
+    justify-self: end;
+    text-align: right;
 }
-.trocar-feature__icon--size::after{
-    width: 2px;
-    height: 32px;
-    left: 36px;
-    top: 11px;
-    box-shadow:
-        -8px 0 0 -0.5px rgba(255, 255, 255, 0.9),
-        4px -10px 0 -0.5px rgba(255, 255, 255, 0.9),
-        4px 10px 0 -0.5px rgba(255, 255, 255, 0.9);
+.forcep-scroll-step--grip > div:last-child .trocar-feature__icon{
+    margin-left: auto;
 }
-.trocar-feature__icon--v::before{
-    width: 18px;
-    height: 38px;
-    left: 18px;
-    top: 8px;
-    clip-path: polygon(0 0, 100% 22%, 58% 100%, 35% 100%);
-    background: rgba(255, 255, 255, 0.9);
-    transform: none;
+.forcep-scroll-step.is-active{
+    opacity: 1;
+    transform: translateY(0);
 }
-.trocar-feature__icon--v::after{
-    width: 12px;
-    height: 34px;
-    left: 21px;
-    top: 10px;
-    clip-path: polygon(0 0, 100% 22%, 58% 100%, 35% 100%);
-    background: #00192d;
+.forcep-scroll-step h2{
+    margin: 0 0 16px;
+    font-size: 30px;
+    line-height: 1.15;
+    font-weight: 800;
+}
+.forcep-scroll-step p{
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 15px;
+    line-height: 1.55;
 }
 .erop-product-page .brand-product-nav{
     max-width: 980px;
     margin: 0 auto;
     padding: 0 20px 58px;
+}
+.trocar-scroll-story + .brand-product-nav,
+.forcep-scroll-story + .brand-product-nav{
+    position: relative;
+    z-index: 4;
+    margin-top: -112px;
+    padding-bottom: 42px;
+    background: #00192d;
+    box-shadow: 0 0 0 100vmax #00192d;
+    clip-path: inset(0 -100vmax);
+}
+.trocar-scroll-story + .brand-product-nav .brand-product-nav__link,
+.forcep-scroll-story + .brand-product-nav .brand-product-nav__link{
+    background: rgba(246, 249, 255, 0.92);
+    border-color: rgba(255, 255, 255, 0.36);
+    box-shadow: 0 18px 34px rgba(0, 12, 28, 0.28);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 .erop-feature-panel + .brand-product-nav{
     position: relative;
@@ -2084,16 +2229,60 @@ body{
         gap: 18px;
     }
     .trocar-scroll-story{
-        --trocar-x: 10vw;
+        --trocar-left: 70%;
         --trocar-scale: 0.72;
-        --halo-x: 9vw;
-        min-height: 300vh;
+        --halo-left: 51%;
+        --halo-top: 38%;
+        --halo-size: 220px;
+        --focus-x: 12%;
+        min-height: 225vh;
+    }
+    .trocar-scroll-story__focus{
+        width: min(720px, 84vw);
+        height: min(500px, 68vh);
     }
     .trocar-scroll-story__image{
-        width: min(340px, 44vw);
+        width: min(340px, 62%);
     }
     .trocar-scroll-step{
         padding: 0 8%;
+    }
+    .forcep-scroll-story{
+        --forcep-left: 62%;
+        --forcep-halo-left: 62%;
+        --forcep-focus-width: min(600px, 62vw);
+        --forcep-focus-x: 7%;
+        min-height: 150vh;
+    }
+    .forcep-scroll-story.is-step-1{
+        --forcep-left: 52%;
+        --forcep-halo-left: 44%;
+        --forcep-focus-width: min(780px, 84vw);
+        --forcep-focus-x: 0%;
+    }
+    .forcep-scroll-story__focus{
+        height: min(460px, 66vh);
+    }
+    .forcep-scroll-story__image{
+        width: min(620px, 92%);
+    }
+    .forcep-scroll-step{
+        padding: 0 6%;
+    }
+    .forcep-scroll-step--unlock{
+        max-width: 460px;
+    }
+    .forcep-scroll-step--grip{
+        grid-template-columns: minmax(220px, 300px) 1fr;
+    }
+    .forcep-scroll-step--grip > div:last-child{
+        grid-column: 1;
+        justify-self: start;
+        text-align: left;
+        margin-top: 34px;
+    }
+    .forcep-scroll-step--grip > div:last-child .trocar-feature__icon{
+        margin-left: 0;
     }
     .trocar-scroll-step--valve,
     .trocar-scroll-step--fixation,
@@ -2138,6 +2327,11 @@ body{
     .erop-feature-panel + .brand-product-nav{
         margin-top: -110px;
         padding-bottom: 38px;
+    }
+    .trocar-scroll-story + .brand-product-nav,
+    .forcep-scroll-story + .brand-product-nav{
+        margin-top: -86px;
+        padding-bottom: 34px;
     }
 }
 @media (max-width: 560px){
@@ -2186,26 +2380,93 @@ body{
         max-height: 340px;
         margin-left: 0;
     }
+    .erop-showcase--variations .erop-showcase__image--forcep{
+        max-width: min(380px, 72vw);
+        max-height: 280px;
+    }
     .trocar-info-strip{
         padding: 44px 20px 40px;
     }
     .trocar-scroll-story{
         min-height: auto;
-        --trocar-x: 0px;
-        --trocar-y: 0px;
+        --trocar-left: 50%;
+        --trocar-top: 50%;
         --trocar-scale: 0.72;
-        --halo-x: 0px;
-        --halo-y: -36px;
+        --halo-left: 50%;
+        --halo-top: 43%;
     }
     .trocar-scroll-story__stage{
         position: relative;
         min-height: 420px;
     }
+    .trocar-scroll-story__focus{
+        width: min(360px, 88vw);
+        height: 420px;
+    }
     .trocar-scroll-story__image{
-        width: min(290px, 56vw);
+        width: min(290px, 70%);
     }
     .trocar-scroll-story__steps{
         position: relative;
+    }
+    .forcep-scroll-story{
+        min-height: auto;
+        --forcep-left: 50%;
+        --forcep-top: 50%;
+        --forcep-scale: 0.82;
+        --forcep-halo-left: 50%;
+        --forcep-halo-top: 50%;
+        --forcep-focus-width: min(360px, 88vw);
+        --forcep-focus-x: 0%;
+    }
+    .forcep-scroll-story__stage{
+        position: relative;
+        min-height: 360px;
+    }
+    .forcep-scroll-story__focus{
+        height: 360px;
+    }
+    .forcep-scroll-story__image{
+        width: min(320px, 80%);
+    }
+    .forcep-scroll-story__steps{
+        position: relative;
+    }
+    .forcep-scroll-step,
+    .forcep-scroll-step--grip,
+    .forcep-scroll-step--grip > div:first-child,
+    .forcep-scroll-step--grip > div:last-child{
+        min-height: auto;
+        max-width: none;
+        grid-column: auto;
+        grid-template-columns: 1fr;
+        margin-left: 0;
+        margin-top: 0;
+        justify-self: start;
+        padding: 40px 8%;
+        text-align: left;
+        opacity: 1;
+        transform: none;
+    }
+    .forcep-scroll-step h2{
+        max-width: 320px;
+        font-size: 26px;
+    }
+    .forcep-scroll-step p{
+        max-width: 360px;
+    }
+    .forcep-scroll-step--grip{
+        gap: 0;
+    }
+    .forcep-scroll-step--grip > div:first-child,
+    .forcep-scroll-step--grip > div:last-child{
+        padding: 0;
+    }
+    .forcep-scroll-step--grip > div:last-child{
+        margin-top: 34px;
+    }
+    .forcep-scroll-step--grip > div:last-child .trocar-feature__icon{
+        margin-left: 0;
     }
     .trocar-scroll-step,
     .trocar-scroll-step--valve,
@@ -2222,6 +2483,17 @@ body{
     }
     .trocar-feature p{
         font-size: 14px;
+    }
+    .trocar-feature__icon{
+        width: 84px;
+        height: 84px;
+        margin-bottom: 24px;
+    }
+    .trocar-scroll-story + .brand-product-nav,
+    .forcep-scroll-story + .brand-product-nav{
+        margin-top: 0;
+        padding-top: 24px;
+        padding-bottom: 32px;
     }
     .trocar-scroll-story__halo{
         width: 150px;
@@ -2240,6 +2512,22 @@ body{
     .erop-spec__table td{
         padding: 9px 10px;
         font-size: 11px;
+    }
+    .forcep-spec__table{
+        min-width: 760px;
+    }
+    .forcep-spec__table th,
+    .forcep-spec__table td{
+        padding: 16px 18px;
+        font-size: 18px;
+    }
+    .forcep-spec__competitiveness{
+        margin-top: 54px;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .forcep-spec__competitiveness p{
+        font-size: 14px;
     }
 }
 @media (max-width: 960px){

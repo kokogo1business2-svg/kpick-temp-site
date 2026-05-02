@@ -76,13 +76,26 @@ const eropProducts = [
         label: "Forcep",
         description: "Laparoscopic surgical aid.",
         image: "img/forcep-fc-5.png",
+        showcaseName: "FORCEP",
+        activeVariationIndex: 1,
         imageClass: "erop-showcase__image--forcep",
-        specs: [
-            ["FC-5", "Laparoscopic Forcep", "1"],
-            ["FC-H", "Handle", "1"],
-            ["FC-S", "Shaft", "1"],
-            ["FC-T", "Tip Assembly", "1"],
+        variations: [
+            {
+                code: "FC-3",
+                image: "img/forcep-fc-5.png",
+                description: "Laparoscopic 3mm Forcep<br>Precision surgical aid",
+            },
+            {
+                code: "FC-5",
+                image: "img/forcep-fc-5.png",
+                description: "Laparoscopic 5mm Forcep<br>Precision surgical aid",
+            },
         ],
+        specs: [
+            ["FC-3", "Laparoscopic 3mm Forcep", "1", "img/forcep-fc-5.png"],
+            ["FC-5", "Laparoscopic 5mm Forcep", "1", "img/forcep-fc-5.png"],
+        ],
+        specLayout: "forcep",
     },
     {
         id: "dual-guard",
@@ -200,6 +213,53 @@ function renderSpecRows(rows, fallbackImage) {
 }
 
 function renderSpecSections(product) {
+    if (product.specLayout === "forcep") {
+        return `
+            <section class="erop-spec__group forcep-spec">
+                <h2>SPECIFICATION</h2>
+                <div class="forcep-spec__table-wrap">
+                    <table class="forcep-spec__table">
+                        <tbody>
+                            <tr>
+                                <th>Locking</th>
+                                <td>10-stage</td>
+                                <th>Pain</th>
+                                <td>Fine</td>
+                            </tr>
+                            <tr>
+                                <th>Incision length</th>
+                                <td>2cm</td>
+                                <th>Hospitalization Period</th>
+                                <td>2-3 days</td>
+                            </tr>
+                            <tr>
+                                <th>Scars</th>
+                                <td>1 scar almost invisible</td>
+                                <th>Recovery date</th>
+                                <td>3-4 days</td>
+                            </tr>
+                            <tr>
+                                <th>Functions<br>and<br>Benefits</th>
+                                <td colspan="3">
+                                    <ul>
+                                        <li>Maximize the convenience of the user by embedding an extra 3mm port.</li>
+                                        <li>Minimize postoperative scars</li>
+                                        <li>Reduces risk of complications by incorporating minimal wounds</li>
+                                        <li>Strengthen producing capacities in the field of external medical procedure through the advancement of the cutting edge surgical system.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="forcep-spec__competitiveness">
+                    <h3>Main competitiveness</h3>
+                    <p>Laparoscopic medical procedure aids are utilized to hold and drag interior organs and tissues after inclusion into the human body through trocar. The claw-shaped end effector mounted toward the end of the instrument is used by the handle, and the end effector and needle part are inserted into the body with a trocar where it holds the tissue through maneuvering the handle afterwards.</p>
+                </div>
+            </section>
+        `;
+    }
+
     if (product.specLayout === "trocar") {
         return `
             <section class="erop-spec__group">
@@ -276,6 +336,38 @@ function renderFeaturePanel(product) {
 }
 
 function renderAfterSpecPanel(product) {
+    if (product.id === "forcep") {
+        return `
+            <section class="forcep-scroll-story" aria-label="Forcep feature story">
+                <div class="forcep-scroll-story__stage" aria-hidden="true">
+                    <div class="forcep-scroll-story__focus">
+                        <span class="forcep-scroll-story__halo"></span>
+                        <img src="img/forcep-fc-5.png" alt="" class="forcep-scroll-story__image">
+                    </div>
+                </div>
+                <div class="forcep-scroll-story__steps">
+                    <article class="forcep-scroll-step forcep-scroll-step--unlock is-active" data-forcep-step="0">
+                        <img src="img/onehand-icon.png" alt="" class="trocar-feature__icon">
+                        <h2>One-hand type unlocking function</h2>
+                        <p>When using frequent pincers, the locking function increases hand fatigue, so the gear can be switched to unlocking mode.</p>
+                    </article>
+                    <article class="forcep-scroll-step forcep-scroll-step--grip" data-forcep-step="1">
+                        <div>
+                            <img src="img/comfortgrip-icon.png" alt="" class="trocar-feature__icon">
+                            <h2>Comfortable grip</h2>
+                            <p>Locking key is added to those ergonomically easy to use locations when compared to other products from different companies.</p>
+                        </div>
+                        <div>
+                            <img src="img/10stagegear-icon.png" alt="" class="trocar-feature__icon">
+                            <h2>10-stage gear<br>locking function</h2>
+                            <p>When operating by attaching 10 gears to the handle and trigger, the locking function is applied to each section automatically from 1 to 10 stages (trigger operation when unloading)</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        `;
+    }
+
     if (product.id !== "trocar") {
         return "";
     }
@@ -290,35 +382,37 @@ function renderAfterSpecPanel(product) {
 
         <section class="trocar-scroll-story" aria-label="Trocar feature story">
             <div class="trocar-scroll-story__stage" aria-hidden="true">
-                <span class="trocar-scroll-story__halo"></span>
-                <img src="img/trocar_ts-11.png" alt="" class="trocar-scroll-story__image">
+                <div class="trocar-scroll-story__focus">
+                    <span class="trocar-scroll-story__halo"></span>
+                    <img src="img/trocar_ts-11.png" alt="" class="trocar-scroll-story__image">
+                </div>
             </div>
             <div class="trocar-scroll-story__steps">
                 <article class="trocar-scroll-step trocar-scroll-step--valve" data-trocar-step="0">
-                    <span class="trocar-feature__icon trocar-feature__icon--spark" aria-hidden="true"></span>
+                    <img src="img/gas-leakage icon.png" alt="" class="trocar-feature__icon">
                     <h2>Gas leakage prevention valve</h2>
                     <p>The aperture type valve is applied to prevent CO2 gas leakage by restoring the shape even if the surgical instrument is inserted repeatedly.</p>
                 </article>
                 <article class="trocar-scroll-step trocar-scroll-step--fixation" data-trocar-step="1">
                     <div>
-                        <span class="trocar-feature__icon trocar-feature__icon--slash" aria-hidden="true"></span>
+                        <img src="img/fixation-icon.png" alt="" class="trocar-feature__icon">
                         <h2>Increased fixation<br>of the cannula</h2>
                         <p>The fixed edge is erected to prevent trocar deviation during surgery to enhance the stability and convenience of the practitioner.</p>
                     </div>
                     <div>
-                        <span class="trocar-feature__icon trocar-feature__icon--eye" aria-hidden="true"></span>
+                        <img src="img/dualpath-icon.png" alt="" class="trocar-feature__icon">
                         <h2>DUAL Path</h2>
                         <p>Optimized the surgical vision through a double discharge system that allows fluid and exudate of the subcutaneous fat layer or fascia to escape through the drainage window.</p>
                     </div>
                 </article>
                 <article class="trocar-scroll-step trocar-scroll-step--tip" data-trocar-step="2">
                     <div>
-                        <span class="trocar-feature__icon trocar-feature__icon--size" aria-hidden="true"></span>
+                        <img src="img/headsize-icon.png" alt="" class="trocar-feature__icon">
                         <h2>Minimal head size</h2>
                         <p>25% to 30% more modest head size than other companies to forestall impact between instruments during laparoscopic or robotic medical procedure to limit the burden on medical professionals.</p>
                     </div>
                     <div>
-                        <span class="trocar-feature__icon trocar-feature__icon--v" aria-hidden="true"></span>
+                        <img src="img/vshape-icon.png" alt="" class="trocar-feature__icon">
                         <h2>V-shaped tip</h2>
                         <p>Precise and sharp V-shaped tip for easy use of cannula.</p>
                     </div>
@@ -481,7 +575,43 @@ function hydrateTrocarScrollStory() {
 
         setActiveStep(Number(activeEntry.target.dataset.trocarStep));
     }, {
-        threshold: [0.35, 0.5, 0.65],
+        rootMargin: "-18% 0px -18% 0px",
+        threshold: [0.25, 0.45, 0.6],
+    });
+
+    steps.forEach((step) => observer.observe(step));
+    setActiveStep(0);
+}
+
+function hydrateForcepScrollStory() {
+    const story = document.querySelector(".forcep-scroll-story");
+
+    if (!story) {
+        return;
+    }
+
+    const steps = Array.from(story.querySelectorAll(".forcep-scroll-step"));
+
+    function setActiveStep(activeIndex) {
+        story.classList.toggle("is-step-1", activeIndex === 1);
+        steps.forEach((step, index) => {
+            step.classList.toggle("is-active", index === activeIndex);
+        });
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        const activeEntry = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (!activeEntry) {
+            return;
+        }
+
+        setActiveStep(Number(activeEntry.target.dataset.forcepStep));
+    }, {
+        rootMargin: "-18% 0px -18% 0px",
+        threshold: [0.25, 0.45, 0.6],
     });
 
     steps.forEach((step) => observer.observe(step));
@@ -588,4 +718,5 @@ if (root) {
 
     hydrateVariationShowcase(currentProduct);
     hydrateTrocarScrollStory();
+    hydrateForcepScrollStory();
 }
