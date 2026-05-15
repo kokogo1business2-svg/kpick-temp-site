@@ -14,6 +14,10 @@ const dbPath = join(dataDir, 'kpick_quote.sqlite3');
 const seedPath = join(backendDir, 'seed_products.json');
 const logPath = join(dataDir, 'server.log');
 const pdfLogoPath = join(rootDir, 'img', 'KpickLogoDark.png');
+const letterheadLogoPath = join(rootDir, 'img', 'kpick-letterhead-logo.jpeg');
+const letterheadLocationIconPath = join(rootDir, 'img', 'letterhead-location.png');
+const letterheadPhoneIconPath = join(rootDir, 'img', 'letterhead-phone.png');
+const letterheadEmailIconPath = join(rootDir, 'img', 'letterhead-email.png');
 const websiteQrPath = join(rootDir, 'img', 'kpick-qr.jpg');
 const host = process.env.KPICK_HOST || (process.env.PORT ? '0.0.0.0' : '127.0.0.1');
 const port = getPort(process.env.KPICK_PORT || process.env.PORT);
@@ -1483,6 +1487,7 @@ function sendQuotePdf(response, quote) {
     });
 
     const pageWidth = doc.page.width;
+    const pageHeight = doc.page.height;
     const left = 32;
     const right = pageWidth - 32;
     const width = right - left;
@@ -1520,37 +1525,52 @@ function sendQuotePdf(response, quote) {
             });
     };
 
+    const drawLetterheadLine = (iconPath, text, x, y, textWidth) => {
+        if (existsSync(iconPath)) {
+            doc.image(iconPath, x, y + 1, { width: 10 });
+        }
+        doc.font('Helvetica')
+            .fontSize(6.7)
+            .fillColor('#222222')
+            .text(text, x + 15, y, { width: textWidth, lineGap: 1 });
+    };
+
     const drawInvoiceHeader = () => {
-        if (existsSync(pdfLogoPath)) {
-            doc.image(pdfLogoPath, left + 8, 26, { width: 210 });
+        if (existsSync(letterheadLogoPath)) {
+            doc.image(letterheadLogoPath, left, 26, { width: 305 });
+        } else if (existsSync(pdfLogoPath)) {
+            doc.image(pdfLogoPath, left, 26, { width: 235 });
         } else {
-            doc.font('Helvetica-Bold').fontSize(22).fillColor('#222222').text('K-PICK TRADING CORP.', left + 8, 28);
+            doc.font('Helvetica-Bold').fontSize(22).fillColor('#222222').text('K-PICK TRADING CORP.', left, 28);
         }
 
-        doc.font('Helvetica')
-            .fontSize(8)
-            .fillColor('#000000')
-            .text('Medical Supplies & Korean Healthcare Products Distribution', left + 8, 62)
-            .text('Dakota Building, 555 Gen. Malvar St. cor Adriatico St., Malate, Manila', left + 8, 74)
-            .text('E-mail : kpickmedicalmarketing@gmail.com', right - 215, 38, { width: 210, align: 'right' })
-            .text('Tel. : +63 917 315 8420', right - 215, 50, { width: 210, align: 'right' });
+        const contactX = right - 205;
+        drawLetterheadLine(
+            letterheadLocationIconPath,
+            '555 Gen. Malvar St. Dakota Building, Malate NCR, City of Manila, First District Philippines',
+            contactX,
+            25,
+            190
+        );
+        drawLetterheadLine(letterheadPhoneIconPath, '+63 917 563 5656', contactX, 53, 190);
+        drawLetterheadLine(letterheadEmailIconPath, 'kpick324@gmail.com or kokogo1business2@gmail.com', contactX, 70, 190);
 
         doc.moveTo(left, 91).lineTo(right, 91).stroke(line);
         doc.font('Helvetica-Bold')
             .fontSize(12)
             .fillColor('#000000')
-            .text('PROFORMA-INVOICE', 0, 98, { align: 'center', underline: true });
+            .text('PROFORMA-INVOICE', 0, 101, { align: 'center', underline: true });
 
         doc.font('Helvetica').fontSize(8.5).fillColor('#000000');
-        doc.text(clientLines.join('\n'), left, 122, { width: 310, lineGap: 2 });
-        doc.text(`Date : ${invoiceDate}\nNo. : ${quote.request_number}`, right - 150, 122, { width: 150, align: 'right' });
+        doc.text(clientLines.join('\n'), left, 125, { width: 310, lineGap: 2 });
+        doc.text(`Date : ${invoiceDate}\nNo. : ${quote.request_number}`, right - 150, 125, { width: 150, align: 'right' });
 
-        doc.font('Helvetica-Bold').fontSize(8.5).text('Dear Sirs,', left, 178);
-        doc.font('Helvetica').fontSize(8.5).text('We take much pleasure in offering you as follows :', left, 192, { underline: true });
+        doc.font('Helvetica-Bold').fontSize(8.5).text('Dear Sirs,', left, 176);
+        doc.font('Helvetica').fontSize(8.5).text('We take much pleasure in offering you as follows :', left, 190, { underline: true });
 
         const termsLeft = left;
         const termsRight = left + 300;
-        let y = 210;
+        let y = 207;
         const offerTerms = [
             ['Manufacturer', 'K-Pick Trading Corp.'],
             ['Brand Name', 'K-Pick / Sungshim Brand'],
@@ -1563,7 +1583,7 @@ function sendQuotePdf(response, quote) {
         ];
         offerTerms.forEach(([label, value], index) => {
             const x = index === 1 ? termsRight : termsLeft;
-            const rowY = index === 1 ? 210 : y;
+            const rowY = index === 1 ? 207 : y;
             doc.font('Helvetica-Bold').text(`-. ${label} :`, x, rowY, { continued: true });
             doc.font('Helvetica').text(` ${value}`);
             if (index !== 0 && index !== 1) {
@@ -1583,7 +1603,7 @@ function sendQuotePdf(response, quote) {
             { title: 'Amount', width: 82 }
         ];
         let x = left;
-        let y = 318;
+        let y = 300;
 
         doc.font('Helvetica-Bold').fontSize(8).text('FOB Manila', left, y - 13, { width, align: 'right' });
         columns.forEach((column) => {
@@ -1630,39 +1650,44 @@ function sendQuotePdf(response, quote) {
     drawInvoiceHeader();
 
     let y = drawItemsTable();
-    if (y > 640) {
+    const shortQuote = quote.items.length < 7;
+    if (!shortQuote && y > 640) {
         doc.addPage();
         y = 70;
     }
 
-    doc.font('Helvetica-Bold').fontSize(8).fillColor('#000000').text('Accepted & Confirmed by ;', left, y);
-    doc.text('K-PICK TRADING CORP.', right - 205, y, { width: 205, align: 'center', underline: true });
+    const footerY = pageHeight - 46;
+    const closingY = shortQuote ? Math.min(Math.max(y, 565), 600) : y;
+    const buyerY = closingY + 54;
+    const qrY = shortQuote ? 670 : buyerY + 116;
+    const signatureX = right - 205;
 
-    y += 58;
+    doc.font('Helvetica-Bold').fontSize(8).fillColor('#000000').text('Accepted & Confirmed by ;', left, closingY);
+    doc.text('K-PICK TRADING CORP.', signatureX, closingY, { width: 205, align: 'center', underline: true });
+
     doc.font('Helvetica').fontSize(8);
-    doc.text('Buyer :', left, y);
-    doc.moveTo(left + 38, y + 9).lineTo(left + 190, y + 9).stroke(line);
-    doc.text('Date :', left, y + 18);
-    doc.moveTo(left + 38, y + 27).lineTo(left + 190, y + 27).stroke(line);
+    doc.text('Buyer :', left, buyerY);
+    doc.moveTo(left + 38, buyerY + 9).lineTo(left + 190, buyerY + 9).stroke(line);
+    doc.text('Date :', left, buyerY + 18);
+    doc.moveTo(left + 38, buyerY + 27).lineTo(left + 190, buyerY + 27).stroke(line);
 
-    doc.font('Helvetica-Bold').fontSize(8).text('Ms. Ays San Antonio', right - 205, y - 4, { width: 205, align: 'center' });
-    doc.font('Helvetica').fontSize(7.5).text('Medical Representative', right - 205, y + 9, { width: 205, align: 'center' });
-    doc.font('Helvetica-Bold').fontSize(8).text('Sir Ian Jones Duelo', right - 205, y + 32, { width: 205, align: 'center' });
-    doc.font('Helvetica').fontSize(7.5).text('General Manager', right - 205, y + 45, { width: 205, align: 'center' });
-    doc.font('Helvetica-Bold').fontSize(8).text('Youn Dong Ho', right - 205, y + 68, { width: 205, align: 'center' });
-    doc.font('Helvetica').fontSize(7.5).text('CEO', right - 205, y + 81, { width: 205, align: 'center' });
+    doc.font('Helvetica-Bold').fontSize(8).text('Ms. Ays San Antonio', signatureX, buyerY - 4, { width: 205, align: 'center' });
+    doc.font('Helvetica').fontSize(7.5).text('Medical Representative', signatureX, buyerY + 9, { width: 205, align: 'center' });
+    doc.font('Helvetica-Bold').fontSize(8).text('Sir Ian Jones Duelo', signatureX, buyerY + 30, { width: 205, align: 'center' });
+    doc.font('Helvetica').fontSize(7.5).text('General Manager', signatureX, buyerY + 43, { width: 205, align: 'center' });
+    doc.font('Helvetica-Bold').fontSize(8).text('Youn Dong Ho', signatureX, buyerY + 64, { width: 205, align: 'center' });
+    doc.font('Helvetica').fontSize(7.5).text('CEO', signatureX, buyerY + 77, { width: 205, align: 'center' });
 
-    const qrY = y + 116;
     doc.font('Helvetica-Bold').fontSize(9).text('Visit Our Website', 0, qrY, { align: 'center' });
     if (existsSync(websiteQrPath)) {
-        doc.image(websiteQrPath, pageWidth / 2 - 48, qrY + 18, { width: 96 });
+        doc.image(websiteQrPath, pageWidth / 2 - 42, qrY + 16, { width: 84 });
     } else {
-        doc.rect(pageWidth / 2 - 48, qrY + 18, 96, 96).stroke(line);
-        doc.font('Helvetica').fontSize(7).text(websiteUrl, pageWidth / 2 - 44, qrY + 57, { width: 88, align: 'center' });
+        doc.rect(pageWidth / 2 - 42, qrY + 16, 84, 84).stroke(line);
+        doc.font('Helvetica').fontSize(7).text(websiteUrl, pageWidth / 2 - 38, qrY + 49, { width: 76, align: 'center' });
     }
     doc.font('Helvetica-Oblique')
         .fontSize(7)
-        .text('K-PICK TRADING CORP. | Korean Medical Products & Distribution', 0, qrY + 124, { align: 'center' });
+        .text('K-PICK TRADING CORP. | Korean Medical Products & Distribution', 0, footerY, { align: 'center' });
     doc.end();
 }
 
