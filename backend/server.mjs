@@ -1626,6 +1626,11 @@ function sendQuotePdf(response, quote) {
             }
 
             const effectiveUnitPrice = Number(item.effective_unit_price || item.unit_price || 0);
+            const baseUnitPrice = Number(item.unit_price || 0);
+            const hasUnitDiscount = Number.isFinite(baseUnitPrice) && baseUnitPrice > effectiveUnitPrice;
+            const unitPriceText = hasUnitDiscount
+                ? `${money(effectiveUnitPrice)}\nBase/unit: ${money(baseUnitPrice)}`
+                : money(effectiveUnitPrice);
             const cartons = Number(item.boxes_per_carton) ? Number(item.quantity || 0) / Number(item.boxes_per_carton) : '';
             const cartonText = Number.isFinite(cartons) && cartons ? Number(cartons.toFixed(2)).toString() : '';
             const quantityText = `${Number(item.quantity || 0).toLocaleString('en-PH')} ${item.stock_unit || 'box'}`;
@@ -1637,7 +1642,7 @@ function sendQuotePdf(response, quote) {
             x += columns[1].width;
             drawCell(x, y, columns[2].width, rowHeight, quantityText, { size: 7.5, align: 'center' });
             x += columns[2].width;
-            drawCell(x, y, columns[3].width, rowHeight, money(effectiveUnitPrice), { size: 7.5, align: 'right' });
+            drawCell(x, y, columns[3].width, rowHeight, unitPriceText, { size: hasUnitDiscount ? 6.7 : 7.5, align: 'right' });
             x += columns[3].width;
             drawCell(x, y, columns[4].width, rowHeight, money(item.line_total), { size: 7.5, align: 'right' });
             y += rowHeight;
