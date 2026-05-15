@@ -1604,7 +1604,7 @@ function sendQuotePdf(response, quote) {
             { title: 'Amount', width: 82 }
         ];
         let x = left;
-        let y = 300;
+        let y = 320;
 
         doc.font('Helvetica-Bold').fontSize(8).text('FOB Manila', left, y - 13, { width, align: 'right' });
         columns.forEach((column) => {
