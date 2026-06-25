@@ -3,13 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore EROP surgical medical devices from K-Pick Trading Corp, including laparoscopic instruments, trocars, forceps, wound protectors, and surgical support products.">
+    <meta name="description" content="K-Pick Trading Corp is the exclusive Philippine distributor of EROP Korean surgical devices, including trocars, forceps, wound protectors, port systems, and laparoscopic support products for healthcare procurement teams.">
     <link rel="icon" type="image/png" href="img/kpickicon.png">
     <link rel="stylesheet" href="css/style.css?v=20260509-2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <title>EROP Surgical Devices | K-Pick Trading Corp Philippines</title>
+    <link rel="canonical" href="https://kokogo1business2-svg.github.io/kpick-temp-site/erop.html">
+    <meta property="og:title" content="EROP Surgical Devices Philippines | Exclusive Distributor K-Pick">
+    <meta property="og:description" content="K-Pick Trading Corp is the exclusive Philippine distributor of EROP Korean surgical devices, including trocars, forceps, wound protectors, port systems, and laparoscopic support products for healthcare procurement teams.">
+    <meta property="og:image" content="https://kokogo1business2-svg.github.io/kpick-temp-site/img/EropProductCard.png">
+    <meta property="og:url" content="https://kokogo1business2-svg.github.io/kpick-temp-site/erop.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>EROP Surgical Devices Philippines | Exclusive Distributor K-Pick</title>
 </head>
 <body class="brand-page">
     <section class="heading">
@@ -29,7 +36,28 @@
                 <ul class="navigation" id="primary-navigation">
                     <li class="nav home"><a href="index.html">Home</a></li>
                     <li class="nav aboutus"><a href="index.html#about">About Us</a></li>
-                    <li class="nav brands"><a href="index.html#TieUps">Brands</a></li>
+                    <li class="nav brands nav--has-dropdown">
+                        <span class="nav__dropdown-trigger">
+                            <a href="index.html#TieUps">Brands <i class="nav__arrow" aria-hidden="true">&#9662;</i></a>
+                            <button class="nav__dropdown-toggle" aria-expanded="false" aria-label="Show brand options">&#9662;</button>
+                        </span>
+                        <div class="nav__dropdown" role="menu">
+                            <a href="sungshim.html" role="menuitem" class="nav__dropdown-item">
+                                <span class="nav__dropdown-avatar nav__dropdown-avatar--sungshim">S</span>
+                                <span class="nav__dropdown-label"><strong>Sungshim</strong><small>Injection Devices</small></span>
+                            </a>
+                            <a href="erop.html" role="menuitem" class="nav__dropdown-item">
+                                <span class="nav__dropdown-avatar nav__dropdown-avatar--erop">E</span>
+                                <span class="nav__dropdown-label"><strong>EROP</strong><small>Surgical Devices</small></span>
+                            </a>
+                            <a href="hansol.html" role="menuitem" class="nav__dropdown-item">
+                                <span class="nav__dropdown-avatar nav__dropdown-avatar--hansol">H</span>
+                                <span class="nav__dropdown-label"><strong>Hansol Bu-Hang</strong><small>Cupping Therapy</small></span>
+                            </a>
+                            <div class="nav__dropdown-divider"></div>
+                            <a href="index.html#TieUps" role="menuitem" class="nav__dropdown-item nav__dropdown-item--all">View All Brands &rarr;</a>
+                        </div>
+                    </li>
                     <li class="nav generatePO"><a href="request.htm">Generate Quote / PO</a></li>
                     <li class="nav contactus"><a href="contact.htm">Contact Us</a></li>
                 </ul>
@@ -46,12 +74,13 @@
 
     <main class="body body--brand">
         <section class="brand-intro brand-intro--summary brand-intro--erop">
-            <div class="brand-intro__copy">
+            <div class="brand-intro__copy animate-in animate-in--left">
                 <span class="brand-intro__eyebrow">Surgical Medical Devices</span>
                 <h1>Designed around clinical ideas, surgical efficiency, and patient outcomes.</h1>
-                <p>EROP develops surgical medical devices with a mission to benefit both doctors and patients by bringing surgeon-led ideas into clinical practice.</p>
+                <p>EROP develops surgical medical devices with a mission to benefit both doctors and patients by bringing surgeon-led ideas into clinical practice. In 2025, EROP&rsquo;s New Port trocar was cited in peer-reviewed clinical research published in the <em>Annals of Coloproctology</em> by surgeons at the Catholic University of Korea.</p>
+                <p class="brand-intro__citation">K-Pick Trading Corp is the exclusive Philippine distributor of EROP Korean surgical medical devices, supporting procurement inquiries for laparoscopic trocars, forceps, wound protectors, port systems, skin closure products, and surgical support devices across the Philippines.</p>
             </div>
-            <div class="brand-intro__facts" aria-label="EROP brand facts">
+            <div class="brand-intro__facts animate-in animate-in--right" aria-label="EROP brand facts">
                 <div>
                     <span>Established</span>
                     <strong>2018</strong>
@@ -69,7 +98,7 @@
 
         <section class="erop-categories">
             <h2 class="erop-categories__title">PRODUCT CATEGORIES</h2>
-            <div class="erop-categories__grid">
+            <div class="erop-categories__grid" data-stagger>
                 <a class="erop-category-card" href="erop-eroptix.html">
                     <div class="erop-category-card__media">
                         <h3>EROPTIX</h3>
@@ -161,9 +190,71 @@
                 </a>
             </div>
         </section>
+
+        <div class="erop-research-cite animate-in" aria-label="Clinical research citation">
+            <div class="erop-research-cite__icon">&#128196;</div>
+            <div class="erop-research-cite__body">
+                <div class="erop-research-cite__label">Cited in Peer-Reviewed Clinical Research &mdash; 2025</div>
+                <p class="erop-research-cite__title">Minimally invasive transanal excision for rectal tumors: technical feasibility compared to conventional approach</p>
+                <p class="erop-research-cite__detail">EROP&rsquo;s New Port single-port trocar (KSILS-2PB) was used by surgeons at St. Vincent&rsquo;s Hospital, Catholic University of Korea, in a clinical study of 133 patients comparing minimally invasive and conventional transanal surgical techniques. The study was published in the <strong>Annals of Coloproctology</strong>, Vol. 41(2), pp. 162&ndash;168 (April 2025). Authors: Mun JY, Geong GS, Yoo N, Kim HJ, Cho HM, Kye BH.</p>
+                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12046413/" target="_blank" rel="noopener" class="erop-research-cite__link">Read full study on PubMed Central &rarr;</a>
+            </div>
+        </div>
     </main>
 
-    <footer class="site-footer" id="contact">
+    <section class="brand-certifications" aria-label="EROP certifications and quality standards">
+        <div class="brand-certifications__inner">
+            <div class="brand-certifications__header animate-in">
+                <span class="section-eyebrow">Quality &amp; Compliance</span>
+                <h2>CERTIFICATIONS &amp; STANDARDS</h2>
+                <p>EROP surgical devices are manufactured to international regulatory standards, ensuring the precision, safety, and sterility required for laparoscopic and minimally invasive surgical procedures.</p>
+            </div>
+            <div class="cert-cards-grid" data-stagger>
+                <div class="cert-card cert-card--erop">
+                    <div class="cert-card__icon">ISO</div>
+                    <h3>ISO 13485</h3>
+                    <p>Quality Management System certified for medical device design and manufacturing processes.</p>
+                </div>
+                <div class="cert-card cert-card--erop">
+                    <div class="cert-card__icon">CE</div>
+                    <h3>CE Mark</h3>
+                    <p>European conformity certification for surgical medical devices under EU MDR requirements.</p>
+                </div>
+                <div class="cert-card cert-card--erop">
+                    <div class="cert-card__icon">KR</div>
+                    <h3>MFDS Certified</h3>
+                    <p>Korean Ministry of Food and Drug Safety certification covering EROP surgical device lines.</p>
+                </div>
+                <div class="cert-card cert-card--erop">
+                    <div class="cert-card__icon">PH</div>
+                    <h3>PH FDA Registered</h3>
+                    <p>EROP products distributed by K-Pick are registered with the Philippine FDA for legal distribution.</p>
+                    <span class="cert-card__note">On File &mdash; Available on Request</span>
+                </div>
+            </div>
+            <p class="cert-disclaimer">Certification documentation is available upon formal procurement request. Contact us at <a href="mailto:kpickmedicalmarketing@gmail.com" style="color:#08713d;font-weight:700;">kpickmedicalmarketing@gmail.com</a> for verification.</p>
+        </div>
+    </section>
+    <section class="brand-showcase brand-showcase--erop" id="contact">
+        <div class="brand-showcase__media">
+            <img src="img/eropdashboard.png" alt="EROP surgical medical devices for laparoscopic procedures" class="brand-showcase__image">
+        </div>
+        <div class="brand-showcase__content">
+            <p>EROP surgical devices are built from clinical insight — developed by surgeons, for surgeons. From laparoscopic trocars and forceps to wound protectors, port systems, skin closure instruments, and pain management kits, every EROP product is designed to support precision, patient safety, and better procedural outcomes in the modern operating room.</p>
+        </div>
+    </section>
+    <section class="brand-cta" aria-label="EROP inquiry CTA">
+        <div class="brand-cta__inner animate-in">
+            <span class="brand-cta__eyebrow">Ready to Inquire?</span>
+            <h2>Request EROP surgical devices for your hospital or surgical facility.</h2>
+            <p>K-Pick Trading Corp supports Philippine hospital procurement teams with EROP laparoscopic and surgical instruments. Generate a formal quote or contact our team directly.</p>
+            <div class="brand-cta__actions">
+                <a class="brand-cta__btn brand-cta__btn--primary" href="request.htm">Generate Quote / PO</a>
+                <a class="brand-cta__btn brand-cta__btn--secondary" href="contact.htm">Contact Our Team</a>
+            </div>
+        </div>
+    </section>
+    <footer class="site-footer" id="erop-footer">
         <div class="site-footer__top">
             <div class="site-footer__brand">
                 <img src="img/KpickLogo.png" alt="K-Pick Trading Corp." class="site-footer__logo">
@@ -178,6 +269,7 @@
     </footer>
     <a href="#top" class="back-to-top" aria-label="Back to top">&#8593;</a>
 
+    <script src="script/animate.js"></script>
     <script src="script/navbar.js"></script>
     <script src="script/back-to-top.js"></script>
 </body>

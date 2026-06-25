@@ -3,29 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="K-Pick Trading Corp is a Manila-based medical supplies distributor offering trusted Korean healthcare brands, syringes, surgical devices, and clinical products in the Philippines.">
+    <meta name="description" content="K-Pick Trading Corp is a Manila-based B2B medical supplies distributor for Korean healthcare brands, syringes, pen needles, surgical devices, importation, wholesale supply, logistics, and nationwide procurement support in the Philippines.">
     <link rel="icon" type="image/png" href="img/kpickicon.png">
     <link rel="stylesheet" href="css/style.css?v=20260509-2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <title>K-Pick Trading Corp | Medical Supplies Distributor Philippines</title>
+    <link rel="canonical" href="https://kokogo1business2-svg.github.io/kpick-temp-site/">
+    <meta property="og:title" content="K-Pick Trading Corp | Korean Medical Supplies Distributor Philippines">
+    <meta property="og:description" content="K-Pick Trading Corp is a Manila-based B2B medical supplies distributor for Korean healthcare brands, syringes, pen needles, surgical devices, importation, wholesale supply, logistics, and nationwide procurement support in the Philippines.">
+    <meta property="og:image" content="https://kokogo1business2-svg.github.io/kpick-temp-site/img/KpickLogo.png">
+    <meta property="og:url" content="https://kokogo1business2-svg.github.io/kpick-temp-site/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>K-Pick Trading Corp | Korean Medical Supplies Distributor Philippines</title>
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "K-Pick Trading Corp",
-        "description": "Medical supplies distributor in Manila offering trusted Korean healthcare brands and medical devices in the Philippines.",
-        "email": "kpickmedicalmarketing@gmail.com",
-        "telephone": "+639173158420",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Dakota Building, 555 Gen Malvar St. cor Adriatico St. Brgy. 698 Zone 076",
-            "addressLocality": "Malate",
-            "addressRegion": "Manila",
-            "addressCountry": "PH"
+{
+    "@context": "https://schema.org",
+    "@type": "MedicalOrganization",
+    "name": "K-Pick Trading Corp",
+    "alternateName": "K-Pick",
+    "slogan": "Building Partnerships. Delivering Quality. Improving Lives.",
+    "description": "Manila-based B2B medical supplies distributor importing and supplying Korean healthcare brands to hospitals, clinics, pharmacies, resellers, and healthcare procurement officers across the Philippines.",
+    "foundingDate": "2020",
+    "email": "kpickmedicalmarketing@gmail.com",
+    "telephone": "+639173158420",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Dakota Building, 555 Gen Malvar St. cor Adriatico St.",
+        "addressLocality": "Malate",
+        "addressRegion": "Manila",
+        "addressCountry": "PH"
+    },
+    "areaServed": [
+        "Metro Manila",
+        "Luzon",
+        "Visayas",
+        "Mindanao",
+        "Philippines"
+    ],
+    "makesOffer": [
+        {
+            "@type": "Offer",
+            "itemOffered": {
+                "@type": "Service",
+                "name": "Medical product distribution"
+            }
+        },
+        {
+            "@type": "Offer",
+            "itemOffered": {
+                "@type": "Service",
+                "name": "Healthcare product importation"
+            }
+        },
+        {
+            "@type": "Offer",
+            "itemOffered": {
+                "@type": "Service",
+                "name": "Wholesale and dealer supply"
+            }
+        },
+        {
+            "@type": "Offer",
+            "itemOffered": {
+                "@type": "Service",
+                "name": "Logistics and fulfillment"
+            }
+        },
+        {
+            "@type": "Offer",
+            "itemOffered": {
+                "@type": "Service",
+                "name": "Customer support and after-sales"
+            }
         }
-    }
+    ]
+}
     </script>
 </head>
 <body>
@@ -46,7 +100,28 @@
                 <ul class="navigation" id="primary-navigation">
                     <li class="nav home"><a href="index.html">Home</a></li>   
                     <li class="nav aboutus"><a href="#about">About Us</a></li>
-                    <li class="nav brands"><a href="#TieUps">Brands</a></li>
+                    <li class="nav brands nav--has-dropdown">
+                        <span class="nav__dropdown-trigger">
+                            <a href="#TieUps">Brands <i class="nav__arrow" aria-hidden="true">&#9662;</i></a>
+                            <button class="nav__dropdown-toggle" aria-expanded="false" aria-label="Show brand options">&#9662;</button>
+                        </span>
+                        <div class="nav__dropdown" role="menu">
+                            <a href="sungshim.html" role="menuitem" class="nav__dropdown-item">
+                                <span class="nav__dropdown-avatar nav__dropdown-avatar--sungshim">S</span>
+                                <span class="nav__dropdown-label"><strong>Sungshim</strong><small>Injection Devices</small></span>
+                            </a>
+                            <a href="erop.html" role="menuitem" class="nav__dropdown-item">
+                                <span class="nav__dropdown-avatar nav__dropdown-avatar--erop">E</span>
+                                <span class="nav__dropdown-label"><strong>EROP</strong><small>Surgical Devices</small></span>
+                            </a>
+                            <a href="hansol.html" role="menuitem" class="nav__dropdown-item">
+                                <span class="nav__dropdown-avatar nav__dropdown-avatar--hansol">H</span>
+                                <span class="nav__dropdown-label"><strong>Hansol Bu-Hang</strong><small>Cupping Therapy</small></span>
+                            </a>
+                            <div class="nav__dropdown-divider"></div>
+                            <a href="#TieUps" role="menuitem" class="nav__dropdown-item nav__dropdown-item--all">View All Brands &rarr;</a>
+                        </div>
+                    </li>
                     <li class="nav generatePO"><a href="request.htm">Generate Quote / PO</a></li>
                     <li class="nav contactus"><a href="contact.htm">Contact Us</a></li>
                 </ul>
@@ -58,31 +133,31 @@
         <div class="dashboardarea">
             <div class="dashboardarea__content">
                 <span class="dashboardarea__eyebrow">Korean Medical Brands for Philippine Healthcare</span>
-                <h1>Reliable medical supplies for clinics, hospitals, and care teams.</h1>
-                <p>We distribute trusted surgical devices, injection products, and clinical supplies built for professional healthcare use.</p>
+                <h1>Korean medical supplies for Philippine healthcare procurement.</h1>
+                <p>K-Pick Trading Corp distributes Korean syringes, insulin pen needles, and surgical devices for hospitals, clinics, pharmacies, resellers, and procurement officers across the Philippines.</p>
                 <div class="dashboardarea__actions">
                     <a class="dashboardarea__button dashboardarea__button--primary" href="#TieUps">View Brands</a>
                     <a class="dashboardarea__button dashboardarea__button--secondary" href="request.htm">Generate Quote</a>
                 </div>
                 <div class="dashboardarea__stats" aria-label="K-Pick highlights">
                     <div>
+                        <strong>2020</strong>
+                        <span>Founded in Manila</span>
+                    </div>
+                    <div>
                         <strong>3</strong>
-                        <span>Partner brands</span>
+                        <span>Exclusive lines</span>
                     </div>
                     <div>
                         <strong>PH</strong>
-                        <span>Distributor</span>
-                    </div>
-                    <div>
-                        <strong>Medical</strong>
-                        <span>Supply focus</span>
+                        <span>Nationwide coverage</span>
                     </div>
                 </div>
             </div>
             <div class="dashboardarea__supply-panel" aria-label="K-Pick supply focus">
                 <div class="dashboardarea__panel-head">
                     <span>Supply Focus</span>
-                    <strong>Clinical essentials sourced from trusted manufacturers</strong>
+                    <strong>Clinical essentials sourced from Korean manufacturers</strong>
                 </div>
                 <ul class="dashboardarea__supply-list">
                     <li>
@@ -109,66 +184,143 @@
                 </ul>
                 <div class="dashboardarea__panel-note">
                     <span>Distribution coverage</span>
-                    <strong>Manila-based support for healthcare procurement needs.</strong>
+                    <strong>Metro Manila support with supply reach to Luzon, Visayas, and Mindanao.</strong>
                 </div>
             </div>
         </div>
     </section>
+    <section class="tagline-anchor" aria-label="K-Pick tagline">
+        <p>Premium Korean Medical Supplies, Trusted Worldwide.</p>
+    </section>
+    <div class="trust-bar" aria-label="K-Pick quality credentials">
+        <div class="trust-bar__inner">
+            <span class="trust-bar__item">ISO 13485 Partners</span>
+            <span class="trust-bar__divider"></span>
+            <span class="trust-bar__item">CE Marked Products</span>
+            <span class="trust-bar__divider"></span>
+            <span class="trust-bar__item">Korean MFDS Certified</span>
+            <span class="trust-bar__divider"></span>
+            <span class="trust-bar__item">Exclusive PH Distributor</span>
+            <span class="trust-bar__divider"></span>
+            <span class="trust-bar__item">Nationwide PH Coverage</span>
+        </div>
+    </div>
     <div class="body">
 
  
-    <section class="TieUps" id="TieUps">
-        <div class="TieUpsContainer">
-            <div class="tieups-header">
-                <span class="section-eyebrow">Partner Brands</span>
-                <h1 class="tieupsTitle">EXCLUSIVE PHILIPPINE DISTRIBUTOR OF</h1>
-                <p>Focused medical brands selected for clinical reliability, product consistency, and practical use in Philippine healthcare settings.</p>
+    <section class="brand-spotlights" id="TieUps" aria-label="Partner brand spotlights">
+        <div class="brand-spotlights__header animate-in">
+            <span class="section-eyebrow">Exclusive Partner Brands</span>
+            <h2>EXCLUSIVE PHILIPPINE DISTRIBUTOR OF</h2>
+            <p>Three focused Korean medical brands selected for clinical reliability, regulatory compliance, and consistent performance across Philippine healthcare settings.</p>
+        </div>
+
+        <div class="brand-spotlight brand-spotlight--sungshim" id="sungshim-spotlight">
+            <div class="brand-spotlight__inner">
+                <div class="brand-spotlight__visual animate-in animate-in--left">
+                    <img src="img/sungshimProductCard.png" alt="Sungshim Korean injection devices — insulin syringes, LDS syringes, and pen needles" class="brand-spotlight__product-img">
+                </div>
+                <div class="brand-spotlight__content animate-in animate-in--right">
+                    <div class="brand-spotlight__logo-wrap">
+                        <img src="img/sungshimLogo.png" alt="Sungshim" class="brand-spotlight__logo">
+                    </div>
+                    <span class="brand-spotlight__category">Injection Devices &middot; Exclusive PH Distributor</span>
+                    <h3>Precision-engineered syringes and insulin pen needles built for reliable clinical performance.</h3>
+                    <p>Sungshim develops injection devices designed for accurate dosing, controlled delivery, and consistent performance. K-Pick Trading Corp is the exclusive Philippine distributor supplying hospitals, clinics, pharmacies, and procurement teams across the country.</p>
+                    <div class="brand-spotlight__products">
+                        <span class="brand-spotlight__product-tag">Insulin Syringe</span>
+                        <span class="brand-spotlight__product-tag">Single-Use Syringe</span>
+                        <span class="brand-spotlight__product-tag">LDS Syringe</span>
+                        <span class="brand-spotlight__product-tag">Insulin Pen Needles</span>
+                    </div>
+                    <div class="brand-spotlight__certs" aria-label="Sungshim quality certifications">
+                        <span class="cert-badge cert-badge--blue"><span class="cert-badge__check" aria-hidden="true">&#10003;</span> ISO 13485</span>
+                        <span class="cert-badge cert-badge--blue"><span class="cert-badge__check" aria-hidden="true">&#10003;</span> CE Marked</span>
+                        <span class="cert-badge cert-badge--blue"><span class="cert-badge__check" aria-hidden="true">&#10003;</span> MFDS Certified</span>
+                    </div>
+                    <a class="brand-spotlight__cta" href="sungshim.html" aria-label="Explore Sungshim brand page">Explore Sungshim &rarr;</a>
+                </div>
             </div>
-            <div class="brandContainer">
-                <a class="brand-card sungshimCard" href="sungshim.html">
-                    <img class="brand-card__image brand-card__image--default" src="img/sungshimCard.png" alt="Sungshim Medical card">
-                    <div class="brand-card__hover-content">
-                        <img class="brand-card__product-image" src="img/sungshimProductCard.png" alt="Sungshim syringe product">
-                        <p class="brand-card__description">Precision-engineered syringes designed for accurate dosing and reliable injection performance in clinical and healthcare settings.</p>
+        </div>
+
+        <div class="brand-spotlight brand-spotlight--erop" id="erop-spotlight">
+            <div class="brand-spotlight__inner">
+                <div class="brand-spotlight__content animate-in animate-in--left">
+                    <div class="brand-spotlight__logo-wrap">
+                        <img src="img/eroplogo.png" alt="EROP" class="brand-spotlight__logo brand-spotlight__logo--erop">
                     </div>
-                </a>
-                <a class="brand-card EropCard" href="erop.html">
-                    <img class="brand-card__image brand-card__image--default" src="img/EropCard.png" alt="Erop card">
-                    <div class="brand-card__hover-content">
-                        <img class="brand-card__product-image" src="img/EropProductCard.png" alt="Erop surgical instruments">
-                        <p class="brand-card__description">Advanced laparoscopic instruments and surgical systems built for precision, control, and modern minimally invasive procedures.</p>
+                    <span class="brand-spotlight__category">Surgical Medical Devices &middot; Exclusive PH Distributor</span>
+                    <h3>Surgeon-developed laparoscopic instruments engineered for precision and better patient outcomes.</h3>
+                    <p>EROP designs surgical devices built around ideas from the operating room, with a mission to benefit both doctors and patients. K-Pick Trading Corp is the exclusive Philippine distributor for EROP surgical instruments supporting hospital procurement teams nationwide.</p>
+                    <div class="brand-spotlight__products">
+                        <span class="brand-spotlight__product-tag">Trocar</span>
+                        <span class="brand-spotlight__product-tag">Forcep</span>
+                        <span class="brand-spotlight__product-tag">Eroptix</span>
+                        <span class="brand-spotlight__product-tag">Dual Guard</span>
+                        <span class="brand-spotlight__product-tag">New Port</span>
+                        <span class="brand-spotlight__product-tag">Chito Block</span>
+                        <span class="brand-spotlight__product-tag">T Closure</span>
+                        <span class="brand-spotlight__product-tag">S-Sustener</span>
                     </div>
-                </a>
-                <a class="brand-card HansolCard" href="hansol.html">
-                    <img class="brand-card__image brand-card__image--default" src="img/HansolCard.png" alt="Hansol Bu-Hang card">
-                    <div class="brand-card__hover-content">
-                        <img class="brand-card__product-image" src="img/hansolProductCard.png" alt="Hansol therapeutic suction device">
-                        <p class="brand-card__description">Designed to create controlled suction on targeted areas of the body, supporting therapeutic treatment and recovery processes.</p>
+                    <div class="brand-spotlight__certs" aria-label="EROP quality certifications">
+                        <span class="cert-badge cert-badge--green"><span class="cert-badge__check" aria-hidden="true">&#10003;</span> ISO 13485</span>
+                        <span class="cert-badge cert-badge--green"><span class="cert-badge__check" aria-hidden="true">&#10003;</span> CE Marked</span>
+                        <span class="cert-badge cert-badge--green"><span class="cert-badge__check" aria-hidden="true">&#10003;</span> MFDS Certified</span>
                     </div>
-                </a>
+                    <a class="brand-spotlight__cta" href="erop.html" aria-label="Explore EROP brand page">Explore EROP &rarr;</a>
+                </div>
+                <div class="brand-spotlight__visual animate-in animate-in--right">
+                    <img src="img/EropProductCard.png" alt="EROP Korean surgical and laparoscopic devices" class="brand-spotlight__product-img">
+                </div>
             </div>
-            
+        </div>
+
+        <div class="brand-spotlight brand-spotlight--hansol" id="hansol-spotlight">
+            <div class="brand-spotlight__inner">
+                <div class="brand-spotlight__visual animate-in animate-in--left">
+                    <img src="img/hansolProductCard.png" alt="Hansol Bu-Hang Korean cupping therapy sets" class="brand-spotlight__product-img">
+                </div>
+                <div class="brand-spotlight__content animate-in animate-in--right">
+                    <div class="brand-spotlight__logo-wrap">
+                        <span class="brand-spotlight__brand-name brand-spotlight__brand-name--hansol">HANSOL BU-HANG</span>
+                    </div>
+                    <span class="brand-spotlight__category">Cupping Therapy Sets &middot; Philippine Supplier</span>
+                    <h3>Multi-cup Korean cupping therapy sets for targeted treatment, recovery, and clinical wellness.</h3>
+                    <p>Hansol Bu-Hang cupping sets are designed to support muscle relaxation, circulation, and structured recovery care. Available in four configurations for therapy clinics, wellness centers, and professional reseller buyers across the Philippines.</p>
+                    <div class="brand-spotlight__products">
+                        <span class="brand-spotlight__product-tag">10-Cup Set</span>
+                        <span class="brand-spotlight__product-tag">17-Cup Set</span>
+                        <span class="brand-spotlight__product-tag">19-Cup Set</span>
+                        <span class="brand-spotlight__product-tag">30-Cup Set</span>
+                    </div>
+                    <div class="brand-spotlight__certs" aria-label="Hansol quality certifications">
+                        <span class="cert-badge cert-badge--red"><span class="cert-badge__check" aria-hidden="true">&#10003;</span> MFDS Certified</span>
+                        <span class="cert-badge cert-badge--red"><span class="cert-badge__check" aria-hidden="true">&#10003;</span> Korean Quality Standard</span>
+                    </div>
+                    <a class="brand-spotlight__cta" href="hansol.html" aria-label="Explore Hansol brand page">Explore Hansol &rarr;</a>
+                </div>
+            </div>
         </div>
     </section>
     <section class="about" id="about">
-        <div class="about-container">
+        <div class="about-container animate-in">
             <div class="about-text">
                 <div class="about-title">
                     <span class="section-eyebrow">About K-Pick</span>
-                    <h1 class="about-title">ABOUT K-PICK</h1>
-                    <p class="about-paragraph">K-Pick Trading Corp. is a Manila-based medical supply company focused on sourcing reliable healthcare products from trusted Korean manufacturers.</p>
+                    <h2 class="about-title">ABOUT K-PICK</h2>
+                    <p class="about-paragraph">K-Pick Trading Corp. is a Manila-based B2B medical supplies distributor founded in 2020 to bring reliable Korean healthcare products to the Philippine market. We support hospitals, clinics, pharmacies, resellers, and healthcare procurement teams with product distribution, importation, wholesale supply, logistics, and after-sales coordination.</p>
                     <div class="about-highlights" aria-label="K-Pick company highlights">
                         <div>
-                            <span>Supply Focus</span>
-                            <strong>Medical devices</strong>
+                            <span>Mission</span>
+                            <strong>Reliable Korean healthcare products for the Philippine market</strong>
                         </div>
                         <div>
-                            <span>Brand Source</span>
-                            <strong>Korean partners</strong>
+                            <span>Vision</span>
+                            <strong>A premier medical supplies distributor built on trust and growth</strong>
                         </div>
                         <div>
-                            <span>Use Case</span>
-                            <strong>Professional care</strong>
+                            <span>Approach</span>
+                            <strong>Long-term partnerships with professional operational support</strong>
                         </div>
                     </div>
                 </div>
@@ -178,13 +330,317 @@
             </div>
         </div>
     </section>
+    <section class="company-timeline" aria-label="K-Pick company history">
+        <div class="section-panel-header animate-in">
+            <span class="section-eyebrow">Company History</span>
+            <h2>2020-2025 distribution milestones</h2>
+            <p>K-Pick is building a focused Korean medical distribution platform for the Philippine healthcare market.</p>
+        </div>
+        <div class="timeline-grid" data-stagger>
+            <article>
+                <span>2020</span>
+                <h3>Company founded</h3>
+                <p>K-Pick Trading Corp began operations in Manila with a focus on Korean healthcare products.</p>
+            </article>
+            <article>
+                <span>2023</span>
+                <h3>INSUFiNE distribution</h3>
+                <p>K-Pick established Philippine distribution representation for Korean insulin delivery products.</p>
+            </article>
+            <article>
+                <span>2024</span>
+                <h3>Sungshim exclusive PH distributor</h3>
+                <p>K-Pick became the exclusive Philippine distributor for Sungshim syringes and injection devices.</p>
+            </article>
+            <article>
+                <span>2025</span>
+                <h3>EROP exclusive PH distributor</h3>
+                <p>K-Pick expanded into Korean laparoscopic and surgical device distribution through EROP.</p>
+            </article>
+        </div>
+    </section>
+    <section class="brand-stories" aria-label="Brand stories and insights">
+        <div class="section-panel-header animate-in">
+            <span class="section-eyebrow">Brand Stories &amp; Insights</span>
+            <h2>About Our Partners</h2>
+            <p>Learn more about the Korean medical brands K-Pick distributes and the quality standards that make them trusted in healthcare settings worldwide.</p>
+        </div>
+        <div class="brand-stories__grid" data-stagger>
+            <div class="story-card story-card--kpick">
+                <div class="story-card__accent"></div>
+                <div class="story-card__body">
+                    <span class="story-card__category">K-Pick</span>
+                    <h3>Why the Philippines Needs a Trusted Korean Medical Device Partner</h3>
+                    <p class="story-card__excerpt">The Philippines medical devices market is valued at USD 669 million (2024) and is 99.2% import-reliant &mdash; yet few truly national distributors exist. K-Pick Trading Corp was founded in 2020 specifically to bridge this gap: securing exclusive Philippine distribution for Sungshim and EROP, and supplying certified Korean medical devices to hospitals, clinics, pharmacies, and procurement teams nationwide.</p>
+                    <a href="#about" class="story-card__cta">About K-Pick &rarr;</a>
+                </div>
+            </div>
+            <div class="story-card story-card--sungshim">
+                <div class="story-card__accent"></div>
+                <div class="story-card__body">
+                    <span class="story-card__category">Sungshim</span>
+                    <h3>Sungshim: Globally Stocked by Professional Medical Suppliers Across 4 Continents</h3>
+                    <p class="story-card__excerpt">Established in 1995, Sungshim Medical is listed by the Korea Medical Devices Association (KMDA) and carries CE 0120, ISO 9001, ISO 13485, and Korean MFDS certification. Sungshim syringes and pen needles are actively stocked by professional medical and aesthetic suppliers in the USA, UK, Europe, Australia, and Southeast Asia &mdash; products distributed globally to hospitals, clinics, and pharmacies across more than 10 countries.</p>
+                    <a href="sungshim.html" class="story-card__cta">Explore Sungshim &rarr;</a>
+                </div>
+            </div>
+            <div class="story-card story-card--erop">
+                <div class="story-card__accent"></div>
+                <div class="story-card__body">
+                    <span class="story-card__category">EROP</span>
+                    <h3>EROP New Port Trocar Cited in 2025 Clinical Research at Catholic University of Korea</h3>
+                    <p class="story-card__excerpt">In April 2025, EROP&rsquo;s New Port single-port trocar (KSILS-2PB) was used in a peer-reviewed clinical study published in the <em>Annals of Coloproctology</em> by surgeons at St. Vincent&rsquo;s Hospital, Catholic University of Korea. The study evaluated minimally invasive transanal surgical techniques across 133 patients &mdash; direct evidence that EROP devices are trusted in active clinical practice.</p>
+                    <a href="erop.html" class="story-card__cta">Explore EROP &rarr;</a>
+                </div>
+            </div>
+            <div class="story-card story-card--hansol">
+                <div class="story-card__accent"></div>
+                <div class="story-card__body">
+                    <span class="story-card__category">Hansol</span>
+                    <h3>Stocked by Professional Therapy Suppliers in USA, Australia &amp; Southeast Asia</h3>
+                    <p class="story-card__excerpt">Hansol Bu-Hang cupping sets are sold by professional therapy suppliers worldwide including Tenspros (USA), Terra Rosa (Australia), Acudepot, AA Wellness Supply, and Niel Asher Education. Over 4,830 verified reviews on Amazon. A licensed massage therapist with 6 years of professional experience wrote: <em>&ldquo;I&rsquo;ve tried all different brands of cups over the years and I keep going back to Hansol &mdash; the build of all the pieces is uniform and precise.&rdquo;</em></p>
+                    <a href="hansol.html" class="story-card__cta">Explore Hansol &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="recognition-section" aria-label="Brand recognition and research citations">
+        <div class="recognition-section__inner">
+            <div class="section-panel-header animate-in">
+                <span class="section-eyebrow">Recognition &amp; Research</span>
+                <h2>Cited by Clinicians. Trusted by Professionals.</h2>
+                <p>Our partner brands appear in peer-reviewed clinical research, professional medical supply networks, and practitioner endorsements across the USA, Europe, Australia, and Asia.</p>
+            </div>
+            <div class="recognition-grid" data-stagger>
+                <div class="recognition-card recognition-card--journal">
+                    <div class="recognition-card__source">
+                        <span class="recognition-card__source-icon">E</span>
+                        Annals of Coloproctology &middot; 2025
+                    </div>
+                    <blockquote class="recognition-card__quote">
+                        &ldquo;New Port (KSILS-2PB, EROP) — single-port trocar device used for minimally invasive transanal surgical procedures at St. Vincent&rsquo;s Hospital, Catholic University of Korea.&rdquo;
+                    </blockquote>
+                    <div class="recognition-card__meta">
+                        <span class="recognition-card__tag recognition-card__tag--erop">EROP Surgical</span>
+                        <span class="recognition-card__cite">Mun et al. &mdash; Ann Coloproctol 2025;41(2):162-168 &middot; Catholic University of Korea</span>
+                        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12046413/" target="_blank" rel="noopener" class="recognition-card__link">View study on PubMed Central &rarr;</a>
+                    </div>
+                </div>
+                <div class="recognition-card recognition-card--review">
+                    <div class="recognition-card__source">
+                        <span class="recognition-card__source-icon">H</span>
+                        Verified Professional Review &middot; Amazon.com
+                    </div>
+                    <blockquote class="recognition-card__quote">
+                        &ldquo;I&rsquo;ve tried all different brands of cups over the years and I keep going back to the Hansol brand. The build of all the pieces is uniform and precise.&rdquo;
+                    </blockquote>
+                    <div class="recognition-card__meta">
+                        <span class="recognition-card__tag recognition-card__tag--hansol">Hansol Bu-Hang</span>
+                        <span class="recognition-card__cite">Licensed massage therapist &middot; 6 years professional cupping therapy experience &middot; 4,830+ global reviews</span>
+                    </div>
+                </div>
+                <div class="recognition-card recognition-card--global">
+                    <div class="recognition-card__source">
+                        <span class="recognition-card__source-icon">S</span>
+                        Korea Medical Devices Association (KMDA)
+                    </div>
+                    <blockquote class="recognition-card__quote">
+                        &ldquo;High quality products have earned an excellent reputation from domestic and overseas customers.&rdquo; Sungshim products are supplied to hospitals, clinics, and pharmacies in 10+ countries across 4 continents.
+                    </blockquote>
+                    <div class="recognition-card__meta">
+                        <span class="recognition-card__tag recognition-card__tag--sungshim">Sungshim Medical</span>
+                        <span class="recognition-card__cite">KMDA-listed &middot; CE 0120, ISO 9001, ISO 13485 &middot; Available at professional suppliers in USA, Europe &amp; Australia</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ph-market-strip animate-in">
+                <div class="ph-market-strip__stat">
+                    <strong>USD 669M</strong>
+                    <span>Philippines medical devices market (2024)</span>
+                </div>
+                <div class="ph-market-strip__stat">
+                    <strong>9% CAGR</strong>
+                    <span>Projected market growth through 2034</span>
+                </div>
+                <div class="ph-market-strip__stat">
+                    <strong>99.2%</strong>
+                    <span>Import-reliant — market built on trusted distributors</span>
+                </div>
+                <div class="ph-market-strip__stat">
+                    <strong>K-Pick</strong>
+                    <span>Authorized nationwide Philippine distributor</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services-section" aria-label="K-Pick services">
+        <div class="section-panel-header animate-in">
+            <span class="section-eyebrow">Services</span>
+            <h2>Procurement support for medical buyers</h2>
+            <p>For hospital, clinic, pharmacy, and reseller buyers, K-Pick coordinates product supply from inquiry to delivery support.</p>
+        </div>
+        <div class="service-grid" data-stagger>
+            <article><h3>Medical product distribution</h3><p>Korean syringes, pen needles, surgical devices, and healthcare products for professional channels.</p></article>
+            <article><h3>Healthcare product importation</h3><p>Supplier coordination and import-focused support for selected Korean medical brands.</p></article>
+            <article><h3>Wholesale and dealer supply</h3><p>Structured supply support for resellers, clinics, pharmacies, and dealer networks.</p></article>
+            <article><h3>Logistics and fulfillment</h3><p>Manila-based coordination with supply reach across Metro Manila, Luzon, Visayas, and Mindanao.</p></article>
+            <article><h3>Customer support and after-sales</h3><p>Product inquiry handling, procurement assistance, and continuing account support.</p></article>
+        </div>
+    </section>
+    <section class="coverage-section" aria-label="K-Pick Philippine coverage">
+        <div class="animate-in">
+            <span class="section-eyebrow">Coverage</span>
+            <h2>From Metro Manila to nationwide healthcare channels</h2>
+            <p>K-Pick supports medical supply inquiries across Metro Manila, Luzon, Visayas, and Mindanao. The company is strengthening nationwide distribution capabilities, dealer networks, hospital partnerships, and operational systems to support scalable healthcare distribution.</p>
+        </div>
+        <div class="coverage-list" aria-label="Coverage areas">
+            <span>Metro Manila</span>
+            <span>Luzon</span>
+            <span>Visayas</span>
+            <span>Mindanao</span>
+        </div>
+    </section>
+    <section class="buyer-faq" aria-label="Frequently asked questions">
+        <div class="section-panel-header animate-in">
+            <span class="section-eyebrow">FAQ</span>
+            <h2>Frequently Asked Questions</h2>
+            <p>Common questions from hospitals, clinics, pharmacies, resellers, and procurement officers.</p>
+        </div>
+        <div class="faq-accordion" role="list" data-stagger>
+            <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq-a1">
+                    Who can purchase from K-Pick Trading Corp?
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" id="faq-a1" role="region">
+                    <div class="faq-answer__inner">K-Pick is a B2B medical supplies distributor. We supply hospitals, government health institutions, clinics, pharmacies, resellers, and healthcare procurement teams across the Philippines. Individual retail purchases are not supported — all orders are processed through our quote and PO system for verified buyers.</div>
+                </div>
+            </div>
+            <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq-a2">
+                    How do I request a quote or generate a purchase order?
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" id="faq-a2" role="region">
+                    <div class="faq-answer__inner">Use the <a href="request.htm" style="color:#0f4ca3;font-weight:700;">Generate Quote / PO</a> tool on this website to select products, enter your delivery details, and submit a formal inquiry. Our team will follow up within one business day to confirm availability, pricing, and delivery terms.</div>
+                </div>
+            </div>
+            <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq-a3">
+                    Are the products registered with the Philippine FDA?
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" id="faq-a3" role="region">
+                    <div class="faq-answer__inner">Yes. K-Pick Trading Corp holds a License to Operate (LTO) as a medical device distributor issued by the Philippine Food and Drug Administration. Products distributed through K-Pick carry the appropriate regulatory documentation. Copies of LTO and product registration certificates are available upon formal request for procurement purposes.</div>
+                </div>
+            </div>
+            <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq-a4">
+                    What certifications do Sungshim and EROP products hold?
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" id="faq-a4" role="region">
+                    <div class="faq-answer__inner">Both Sungshim and EROP are Korean-manufactured medical device brands that comply with ISO 13485 quality management standards. Their products carry CE marking indicating conformity with European medical device requirements, and hold MFDS (Ministry of Food and Drug Safety) certification in Korea. Documentation is available upon formal procurement request.</div>
+                </div>
+            </div>
+            <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq-a5">
+                    Is there a minimum order quantity (MOQ)?
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" id="faq-a5" role="region">
+                    <div class="faq-answer__inner">MOQs vary by product and packaging type. Most syringe products are available per box or per carton, and carton-based orders may qualify for volume pricing. Use the Generate Quote tool to select products and packaging — pricing and carton discount details are shown automatically based on your selection.</div>
+                </div>
+            </div>
+            <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq-a6">
+                    Where does K-Pick deliver?
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" id="faq-a6" role="region">
+                    <div class="faq-answer__inner">K-Pick is based in Manila and supports delivery coordination across Metro Manila, Luzon, Visayas, and Mindanao. Delivery timelines depend on product availability and destination. We work with established logistics partners to ensure secure and traceable shipment of all medical product orders.</div>
+                </div>
+            </div>
+            <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq-a7">
+                    How long does it take to receive an order?
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" id="faq-a7" role="region">
+                    <div class="faq-answer__inner">After your purchase order is confirmed and payment is processed, orders for Metro Manila are typically fulfilled within 3–5 business days. Provincial orders may take 5–10 business days depending on the carrier and destination. Expedited delivery options can be discussed directly with our team for urgent requirements.</div>
+                </div>
+            </div>
+            <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq-a8">
+                    Can K-Pick supply hospitals and government health institutions?
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" id="faq-a8" role="region">
+                    <div class="faq-answer__inner">Yes. K-Pick regularly supports procurement inquiries from hospitals, LGU health offices, and government healthcare facilities. We can assist with formal quotation preparation, product specification documentation, and compliance paperwork required for public procurement processes such as PhilGEPS submissions.</div>
+                </div>
+            </div>
+            <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq-a9">
+                    Can I become a reseller or dealer of K-Pick products?
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" id="faq-a9" role="region">
+                    <div class="faq-answer__inner">Yes. K-Pick supports reseller and dealer inquiries for Sungshim, EROP, and Hansol Bu-Hang products. We offer structured pricing for qualified dealer partners. Contact us through the <a href="contact.htm" style="color:#0f4ca3;font-weight:700;">Contact page</a> with your business details to begin the partnership discussion.</div>
+                </div>
+            </div>
+            <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq-a10">
+                    What happens if a product is found defective or damaged on arrival?
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" id="faq-a10" role="region">
+                    <div class="faq-answer__inner">All products are inspected prior to shipment. If a defect or damage is discovered upon delivery, please contact our team within 48 hours with photographic documentation. K-Pick will coordinate an appropriate resolution, which may include replacement, credit note, or return processing, depending on the nature of the issue.</div>
+                </div>
+            </div>
+        </div>
+    </section>
     </div>
+    <section class="kpick-certifications" id="certifications" aria-label="K-Pick certifications and compliance">
+        <div class="kpick-certifications__inner">
+            <div class="section-panel-header animate-in">
+                <span class="section-eyebrow">Compliance &amp; Registration</span>
+                <h2>K-Pick Trading Corp Credentials</h2>
+                <p>K-Pick operates as a properly registered Philippine medical supplies distributor with full regulatory documentation to support healthcare procurement requirements.</p>
+            </div>
+            <div class="kpick-cert-grid" data-stagger>
+                <div class="kpick-cert-card">
+                    <div class="kpick-cert-card__icon">DTI</div>
+                    <h3>DTI Registered</h3>
+                    <p>Registered with the Department of Trade and Industry of the Philippines.</p>
+                </div>
+                <div class="kpick-cert-card">
+                    <div class="kpick-cert-card__icon">SEC</div>
+                    <h3>SEC Incorporated</h3>
+                    <p>Duly incorporated with the Securities and Exchange Commission of the Philippines.</p>
+                </div>
+                <div class="kpick-cert-card">
+                    <div class="kpick-cert-card__icon">FDA</div>
+                    <h3>Philippine FDA LTO</h3>
+                    <p>License to Operate as a medical device distributor issued by the Philippine FDA.</p>
+                </div>
+                <div class="kpick-cert-card">
+                    <div class="kpick-cert-card__icon">EXC</div>
+                    <h3>Exclusive Distributor</h3>
+                    <p>Official exclusive Philippine distributor for Sungshim and EROP Korean medical brands.</p>
+                </div>
+            </div>
+            <div class="kpick-cert-upload">
+                <strong>K-Pick Trading Corp Certificate</strong>
+                <p>Official certification documents will be displayed here. Contact us directly at <a href="mailto:kpickmedicalmarketing@gmail.com" style="color:#0f4ca3;font-weight:700;">kpickmedicalmarketing@gmail.com</a> to request copies of our regulatory credentials for procurement verification.</p>
+            </div>
+        </div>
+    </section>
     <section class="partner-section" id="contact">
-        <div class="partner-section__inner">
-            <span class="section-eyebrow">Procurement Support</span>
-            <h2 class="partner-section__title">PARTNER WITH A RELIABLE MEDICAL SUPPLIER</h2>
-            <p class="partner-section__text">Contact us to learn more about our products and how we can support your healthcare supply needs.</p>
-            <a class="partner-section__button" href="contact.htm">Contact K-Pick</a>
+        <div class="partner-section__inner animate-in">
+            <span class="section-eyebrow">Partnership Approach</span>
+            <h2 class="partner-section__title">Build a sustainable Korean medical supply partnership.</h2>
+            <p class="partner-section__text">K-Pick supports long-term business sustainability, reliable nationwide distribution, brand positioning, market expansion, and professional operational support for healthcare partners.</p>
+            <a class="partner-section__button" href="contact.htm">Discuss Supply Partnership</a>
         </div>
     </section>
     <footer class="site-footer">
@@ -202,6 +658,26 @@
     </footer>
     <a href="#top" class="back-to-top" aria-label="Back to top">&#8593;</a>
 
+    <script>
+        document.querySelectorAll('.faq-question').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var item = this.closest('.faq-item');
+                var answer = item.querySelector('.faq-answer');
+                var isActive = item.classList.contains('is-active');
+                document.querySelectorAll('.faq-item').forEach(function(el) {
+                    el.classList.remove('is-active');
+                    el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                    el.querySelector('.faq-answer').classList.remove('is-open');
+                });
+                if (!isActive) {
+                    item.classList.add('is-active');
+                    this.setAttribute('aria-expanded', 'true');
+                    answer.classList.add('is-open');
+                }
+            });
+        });
+    </script>
+    <script src="script/animate.js"></script>
     <script src="script/navbar.js"></script>
     <script src="script/back-to-top.js"></script>
 </body>

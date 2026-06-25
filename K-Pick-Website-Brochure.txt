@@ -1,0 +1,175 @@
+K-PICK TRADING CORP.
+Website and Local PO Workflow System Overview
+
+Purpose of the Website
+
+The K-Pick Trading Corp. website is designed to serve as the company’s digital front office. It presents K-Pick as a professional medical supplies distributor in the Philippines, highlights the company’s partner brands, showcases product categories, and gives customers and staff a direct way to generate quotation or purchase order requests.
+
+The website is not only a product brochure. It also supports daily operations by connecting customer inquiries, product selection, inventory visibility, quotation generation, purchase order tracking, and fulfillment status into one local workflow.
+
+
+What the Website Is For
+
+1. Company Visibility
+
+The website helps K-Pick appear more professional and searchable online. It introduces the company, its medical supply focus, its Korean partner brands, and its product categories in a structured way. This helps customers, clinics, hospitals, distributors, and procurement teams understand what K-Pick offers before contacting the company.
+
+2. Product Presentation
+
+The site organizes K-Pick’s products by brand and category, including Sungshim syringes, injection products, LDS syringes, pen needles, and EROP surgical devices. This makes the product catalog easier to browse compared with sending product details manually through chat, email, or files.
+
+3. Customer Inquiry Support
+
+The contact page gives customers a direct way to send inquiries. The wording and appearance are aligned with the medical supply and injection-product focus of the company, making the site feel more credible and consistent.
+
+4. Quote and PO Generation
+
+The Generate Quote / PO page allows staff or customers to select products, input customer details, and generate a PO request. The system produces a PO number, calculates totals and discounts, and allows a PDF copy to be downloaded.
+
+5. Operations Dashboard
+
+The backend dashboard gives authorized staff a controlled way to manage generated PO requests, update transaction details, assign inventory staff, and track fulfillment progress.
+
+
+Key Strengths
+
+Professional Digital Presence
+
+The website gives K-Pick a more established and trustworthy online presence. It presents the company as a focused healthcare supplier rather than relying only on informal communication channels.
+
+Clear Medical Supply Positioning
+
+The landing page now highlights syringes and injection products, which are directly related to medical devices and injection procedures. This makes the company’s focus clearer to visitors from the first screen.
+
+Structured Product Catalog
+
+Products are grouped by brand and product type. This improves customer understanding and makes it easier for staff to reference products during inquiries, quotations, and sales discussions.
+
+Local SEO Foundation
+
+The site already includes important search terms such as medical supplies, syringe supplier, Korean medical brands, Manila, Philippines, clinics, hospitals, and healthcare distribution. With a final domain and SEO cleanup, this can help improve search visibility.
+
+PO Request Automation
+
+The Generate Quote / PO feature reduces manual work by letting users select products and automatically generate request details, totals, discounts, and a downloadable PDF.
+
+Inventory Sheet Integration
+
+The backend can mirror inventory and pricing data from a Google Sheet. This allows the company to keep using its current inventory system while giving the website backend updated stock and price information.
+
+Role-Based Staff Access
+
+The dashboard separates permissions by role:
+
+- Admin can manage accounts and control all records.
+- Customer Service can input SI numbers, assign inventory staff, update customer details, and manage unpaid/generated POs.
+- Inventory staff can only update fulfillment conditions.
+- Manager and Boss roles can view reports and monitor operations.
+
+This prevents accidental or unauthorized changes to sensitive records.
+
+Controlled PO Workflow
+
+The system supports a clear PO status flow:
+
+- Generated
+- Paid / SI Issued
+- Assigned to Inventory
+- Segregating Products
+- For Repacking
+- Ready for Shipment
+- Released / Shipped
+
+This gives the company better visibility over where each order is in the fulfillment process.
+
+Reduced Manual Follow-Up
+
+Instead of asking repeatedly where an order is, staff can check the dashboard. CS can see if a PO has been assigned, and inventory can update whether products are being segregated, repacked, ready for shipment, or already released.
+
+PDF Documentation
+
+Each generated PO can be downloaded as a PDF containing customer information, selected products, quantities, prices, discounts, subtotal, and grand total. This creates a more professional record for customers and internal review.
+
+
+How This Contributes to Company Operations
+
+Faster Quotation Handling
+
+Staff can generate PO requests faster because products, prices, discounts, and totals are handled by the system. This reduces repetitive manual calculations.
+
+Better Order Tracking
+
+Each PO has a number and status. This makes it easier to locate, monitor, and follow up on customer requests.
+
+Cleaner CS and Inventory Coordination
+
+CS can assign an inventory staff member from a dropdown, while inventory staff can update only the fulfillment status. This creates a cleaner handoff between sales/customer service and warehouse operations.
+
+Fewer Errors
+
+Role restrictions help prevent staff from editing the wrong fields. For example, inventory staff cannot edit pricing or customer information, and CS cannot delete or change products after a PO is paid.
+
+Improved Accountability
+
+The system records who updated workflow details. This helps management understand who handled a PO and when changes were made.
+
+Management Visibility
+
+Manager and Boss roles can view reports and status summaries. This gives decision makers a clearer picture of current PO activity and operational movement.
+
+Scalable Local Deployment
+
+The backend uses a local database and can run on the company’s development PC or a Mac server. This allows the company to operate locally first, then improve or migrate later as needed.
+
+
+How This Contributes to Company Visibility
+
+More Professional First Impression
+
+A dedicated website makes the company look more credible to customers, suppliers, clinics, hospitals, and partner brands.
+
+Searchable Product Information
+
+Public product pages give search engines and customers more information about K-Pick’s products and categories.
+
+Stronger Brand Positioning
+
+The website communicates that K-Pick focuses on reliable medical supplies, injection products, and Korean healthcare brands for Philippine healthcare needs.
+
+Easier Customer Contact
+
+Customers can inquire directly through the contact form or use the quote request system, reducing friction in the sales process.
+
+Better Support for Sales Conversations
+
+Sales staff can send product page links instead of manually explaining every product or attaching separate files.
+
+
+Recommended Next Steps
+
+1. Final Content Review
+
+Management should review all product wording, prices, and product claims before the site is published publicly.
+
+2. SEO Cleanup Before Final Domain Launch
+
+Before launching on a real domain, update the sitemap, add canonical URLs, remove accidental noindex tags from public product pages, and improve headings where needed.
+
+3. Staff User Testing
+
+CS, inventory, manager, and admin users should test the full PO workflow using sample orders.
+
+4. Mac Deployment
+
+Once approved, the backend can be deployed on the Mac that will act as the local server or database host.
+
+5. Future Reporting Enhancements
+
+Reports can later include monthly PO totals, sales totals, fulfilled orders, cancelled orders, inventory workload, and product demand.
+
+
+Summary
+
+The K-Pick website supports both marketing and operations. It improves the company’s professional visibility while also giving staff a working system for quote generation, PO tracking, inventory handoff, fulfillment status updates, and management review.
+
+This makes the website more than a brochure. It becomes a practical business tool that can help K-Pick improve customer handling, internal coordination, order visibility, and future growth.

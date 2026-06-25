@@ -1,0 +1,170 @@
+K-PICK TRADING CORP.
+Daily PO Operations Report
+Date: May 3, 2026
+Source: Local PO Backend Database
+
+
+Executive Summary
+
+Total PO records generated today: 9
+Active PO records: 8
+Deleted / cancelled PO records: 1
+
+Active gross subtotal: PHP 167,872.00
+Active carton discounts: PHP 22,976.55
+Active grand total after discounts: PHP 144,895.45
+
+Total product quantity across active POs: 258 boxes
+
+
+Workflow Status Summary
+
+Generated / unpaid: 5 POs
+Assigned to Inventory: 1 PO
+Ready for Shipment: 2 POs
+Deleted / cancelled: 1 PO
+
+
+Category Movement Summary
+
+Insulin Syringe: 174 boxes
+Pen Needles: 60 boxes
+LDS Syringe: 17 boxes
+Single-Use Syringe: 7 boxes
+
+
+Active PO Details
+
+1. KPQ-20260503-0014
+Customer: ian pharmaceutical
+Contact: Ian Duelo
+Status: Ready for Shipment
+SI Number: SI-TEST-001
+Assigned Inventory: Inventory Staff A
+Subtotal: PHP 7,579.00
+Discount: PHP 0.00
+Grand Total: PHP 7,579.00
+Total Quantity: 11 boxes
+
+2. KPQ-20260503-0013
+Customer: ian pharmaceutical
+Contact: Ian Duelo
+Status: Ready for Shipment
+SI Number: 09128383895
+Assigned Inventory: Inventory Staff
+Subtotal: PHP 24,522.00
+Discount: PHP 3,534.60
+Grand Total: PHP 20,987.40
+Total Quantity: 38 boxes
+
+3. KPQ-20260503-0012
+Customer: jaymarkclinisc
+Contact: jarmark
+Status: Assigned to Inventory
+SI Number: 0983748174
+Assigned Inventory: John Lenard Galit
+Subtotal: PHP 25,474.00
+Discount: PHP 3,821.10
+Grand Total: PHP 21,652.90
+Total Quantity: 36 boxes
+
+4. KPQ-20260503-0011
+Customer: JM CLINIC
+Contact: JAYMARK
+Status: Generated
+SI Number: Not yet provided
+Assigned Inventory: Not yet assigned
+Subtotal: PHP 26,054.00
+Discount: PHP 3,908.10
+Grand Total: PHP 22,145.90
+Total Quantity: 36 boxes
+
+5. KPQ-20260503-0009
+Customer: Bulk Buyer Name
+Contact: Bulk Buyer Name
+Status: Generated
+SI Number: Not yet provided
+Assigned Inventory: Not yet assigned
+Subtotal: PHP 22,992.00
+Discount: PHP 3,448.80
+Grand Total: PHP 19,543.20
+Total Quantity: 48 boxes
+
+6. KPQ-20260503-0008
+Customer: Not provided
+Contact: Not provided
+Status: Generated
+SI Number: Not yet provided
+Assigned Inventory: Not yet assigned
+Subtotal: PHP 27,430.00
+Discount: PHP 4,114.50
+Grand Total: PHP 23,315.50
+Total Quantity: 40 boxes
+
+7. KPQ-20260503-0007
+Customer: Not provided
+Contact: Not provided
+Status: Generated
+SI Number: Not yet provided
+Assigned Inventory: Not yet assigned
+Subtotal: PHP 1,368.00
+Discount: PHP 0.00
+Grand Total: PHP 1,368.00
+Total Quantity: 2 boxes
+
+8. KPQ-20260503-0006
+Customer: PDF Test Hospital
+Contact: Test User
+Status: Generated
+SI Number: Not yet provided
+Assigned Inventory: Not yet assigned
+Subtotal: PHP 32,453.00
+Discount: PHP 4,149.45
+Grand Total: PHP 28,303.55
+Total Quantity: 47 boxes
+
+
+Deleted / Cancelled PO
+
+KPQ-20260503-0010
+Customer: Lenards Clinic
+Deleted by: Nikka Toledo
+Reason: Customer cancelled / unreachable
+Original grand total: PHP 1,368.00
+
+
+Operational Notes
+
+1. Two active generated POs have missing customer details:
+   - KPQ-20260503-0008
+   - KPQ-20260503-0007
+
+   These should be reviewed before any fulfillment action.
+
+2. Five active POs are still in Generated status. These require CS follow-up for SI number, payment confirmation, or cancellation.
+
+3. Two POs are already marked Ready for Shipment:
+   - KPQ-20260503-0014
+   - KPQ-20260503-0013
+
+4. One PO is assigned to inventory but not yet marked as segregating, repacking, ready, or released:
+   - KPQ-20260503-0012
+
+5. Discount activity is significant today. Active carton discounts total PHP 22,976.55.
+
+
+Recommended Follow-Up
+
+CS Team:
+- Follow up on all Generated POs.
+- Complete missing customer details for older test/generated records.
+- Confirm whether test entries should remain active or be deleted by Admin/CS if they are not real orders.
+
+Inventory Team:
+- Continue status update for KPQ-20260503-0012.
+- Confirm shipment readiness and release status for POs already marked Ready for Shipment.
+
+Management:
+- Review active grand total of PHP 144,895.45.
+- Confirm if old test records should be excluded from actual operational reports in future.
+- Consider adding a daily report export button in the dashboard for faster reporting.

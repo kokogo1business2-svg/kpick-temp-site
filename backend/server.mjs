@@ -1,4 +1,4 @@
-import { createServer } from 'node:http';
+﻿import { createServer } from 'node:http';
 import { createHmac, pbkdf2Sync, randomBytes, timingSafeEqual } from 'node:crypto';
 import { readFile, mkdir, appendFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
@@ -1565,7 +1565,7 @@ function sendQuotePdf(response, quote) {
         doc.text(clientLines.join('\n'), left, 125, { width: 310, lineGap: 2 });
         doc.text(`Date : ${invoiceDate}\nNo. : ${quote.request_number}`, right - 150, 125, { width: 150, align: 'right' });
 
-        doc.font('Helvetica-Bold').fontSize(8.5).text('Dear Sirs,', left, 176);
+        doc.font('Helvetica-Bold').fontSize(8.5).text('Dear Customer,', left, 176);
         doc.font('Helvetica').fontSize(8.5).text('We take much pleasure in offering you as follows :', left, 190, { underline: true });
 
         const termsLeft = left;
@@ -1669,9 +1669,9 @@ function sendQuotePdf(response, quote) {
     const signatureStartX = left + 220;
     const signatureWidth = 105;
     const signatories = [
-        ['Ms. Ays San Antonio', 'Medical Representative'],
-        ['Sir Ian Jones Duelo', 'General Manager'],
-        ['Youn Dong Ho', 'CEO']
+        ['Ays San Antonio', 'Medical Representative'],
+        ['Ian Jones Duelo', 'General Manager'],
+        ['Youn DongHo', 'CEO']
     ];
 
     doc.font('Helvetica-Bold').fontSize(8).fillColor('#000000').text('Accepted & Confirmed by ;', left, closingY);
@@ -2010,3 +2010,4 @@ server.listen(port, host, async () => {
     }
     console.log(`K-Pick backend running at http://${host}:${port}/request.htm`);
 });
+
